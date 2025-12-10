@@ -1,0 +1,438 @@
+/* Investors Page Specific Styles */
+
+.investors-hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    color: white;
+}
+
+.investors-hero .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.investors-hero .hero-subtitle {
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+}
+
+.investment-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 60px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.highlight-card h3 {
+    font-size: 2.5rem;
+    color: #ff6b35;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.highlight-card p {
+    font-size: 1.1rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.investment-overview {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.investment-overview h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.investment-overview .container > p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #ff6b35;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.stat-item p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.financial-projections {
+    padding: 80px 0;
+    background: white;
+}
+
+.financial-projections h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #1a1a1a;
+}
+
+.projection-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.year-projection {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.year-projection:hover {
+    border-color: #ff6b35;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+}
+
+.year-projection h3 {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.revenue, .profit, .valuation {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.revenue {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.profit {
+    color: #ff6b35;
+    font-weight: 600;
+}
+
+.valuation {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.capital-allocation {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.capital-allocation h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #1a1a1a;
+}
+
+.allocation-chart {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.allocation-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.allocation-item:hover {
+    transform: translateY(-5px);
+}
+
+.percentage {
+    font-size: 2.5rem;
+    color: #ff6b35;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.category {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.amount {
+    font-size: 1rem;
+    color: #666;
+}
+
+.competitive-advantages {
+    padding: 80px 0;
+    background: white;
+}
+
+.competitive-advantages h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #1a1a1a;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advantage-card {
+    background: #f8f9fa;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.advantage-card:hover {
+    border-color: #ff6b35;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+}
+
+.advantage-icon {
+    font-size: 3rem;
+    color: #ff6b35;
+    margin-bottom: 25px;
+}
+
+.advantage-card h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.advantage-card p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.leadership-team {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.leadership-team h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #1a1a1a;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.team-member .title {
+    color: #ff6b35;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.team-member p {
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.investor-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    text-align: center;
+    color: white;
+}
+
+.investor-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.investor-cta p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid #ff6b35;
+    color: #ff6b35;
+}
+
+.cta-button.secondary:hover {
+    background: #ff6b35;
+    color: white;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .investors-hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .investors-hero .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .investment-highlights {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 40px 0;
+    }
+    
+    .highlight-card h3 {
+        font-size: 2rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .projection-timeline {
+        grid-template-columns: 1fr;
+    }
+    
+    .allocation-chart {
+        grid-template-columns: 1fr;
+    }
+    
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .investors-hero {
+        padding: 80px 0 60px;
+    }
+    
+    .investment-overview,
+    .financial-projections,
+    .capital-allocation,
+    .competitive-advantages,
+    .leadership-team {
+        padding: 60px 0;
+    }
+    
+    .investor-cta {
+        padding: 80px 0;
+    }
+    
+    .stat-item,
+    .advantage-card,
+    .team-member {
+        padding: 30px 20px;
+    }
+}
