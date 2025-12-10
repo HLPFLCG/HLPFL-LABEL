@@ -1,0 +1,53 @@
+## Summary
+This PR implements proper AJAX form submission that works reliably with Formspree's API.
+
+## The Problem
+The form wasn't submitting properly to Formspree. This new approach uses AJAX with the Formspree API for reliable submission.
+
+## The Solution - AJAX Submission
+
+### How It Works
+1. User fills out and submits the form
+2. JavaScript intercepts the submission
+3. Sends data to Formspree using fetch API
+4. Shows loading spinner while submitting
+5. Displays success or error message
+6. Form stays on page (no redirect)
+
+### Key Features
+
+**Loading States**
+- Button shows spinner icon while submitting
+- Button is disabled to prevent double-submission
+- Clear visual feedback for users
+
+**Success Handling**
+- Green checkmark icon on success
+- Success alert message
+- Form automatically resets after 2 seconds
+- Button returns to normal state
+
+**Error Handling**
+- Red error icon if submission fails
+- User-friendly error message
+- Button returns to normal after 3 seconds
+- Users can try again immediately
+
+**Formspree API Integration**
+- Uses fetch with Accept: application/json header
+- Properly formats FormData for Formspree
+- Works with all Formspree special fields (_subject, _replyto, _gotcha)
+
+## Why This Approach Works Better
+
+1. **More Reliable**: Direct API call to Formspree
+2. **Better UX**: Users stay on page with immediate feedback
+3. **Error Recovery**: Users can retry without losing their data
+4. **Professional**: Loading states and animations
+5. **Prevents Issues**: Disables button during submission
+
+## Testing
+This implementation follows Formspree's official AJAX documentation and should work reliably.
+
+## Files Changed
+- under-construction.html - Added AJAX submission handler

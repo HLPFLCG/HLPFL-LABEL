@@ -1,0 +1,443 @@
+/* 
+ * HLPFL Color Scheme - Professional Music Industry Palette
+ * Design Philosophy: Sleek, readable, distinctive yet timeless
+ * Inspired by: Recording studios, vinyl records, and professional music spaces
+ */
+
+:root {
+  /* === PRIMARY PALETTE === */
+  /* Deep charcoal base with warm undertones - professional yet inviting */
+  --c-bg-primary: #1a1d23;      /* Deep charcoal - main background */
+  --c-bg-secondary: #23272f;    /* Slightly lighter charcoal - sections */
+  --c-bg-tertiary: #2d323c;     /* Mid charcoal - cards/elements */
+  --c-bg-card: #ffffff;         /* Pure white - content cards */
+  
+  /* === TEXT COLORS === */
+  /* High contrast for excellent readability */
+  --c-white: #ffffff;           /* Pure white */
+  --c-text: #2d3748;            /* Deep slate - primary text on light backgrounds */
+  --c-text-muted: #64748b;      /* Muted slate - secondary text */
+  --c-text-light: #94a3b8;      /* Light slate - tertiary text */
+  --c-text-on-dark: #f8fafc;    /* Off-white - text on dark backgrounds */
+  
+  /* === SIGNATURE COLORS === */
+  /* Warm copper/bronze - distinctive music industry feel */
+  --c-gold: #c87941;            /* Rich copper - primary accent */
+  --c-gold-light: #e09560;      /* Light copper - hover states */
+  --c-gold-dark: #a65f2f;       /* Deep copper - pressed states */
+  --c-gold-subtle: #f4e4d7;     /* Pale copper - backgrounds */
+  
+  /* Deep teal - secondary accent for contrast */
+  --c-accent: #2c5f6f;          /* Deep teal - professional accent */
+  --c-accent-light: #3d7a8c;    /* Light teal - hover states */
+  --c-accent-dark: #1e4450;     /* Darker teal - depth */
+  --c-accent-subtle: #e6f2f5;   /* Pale teal - backgrounds */
+  
+  /* === STRUCTURE & BORDERS === */
+  /* Subtle boundaries that don't compete with content */
+  --c-border: #e2e8f0;          /* Light gray - primary borders */
+  --c-border-light: #f1f5f9;    /* Very light gray - subtle dividers */
+  --c-border-dark: #cbd5e1;     /* Medium gray - emphasized borders */
+  
+  /* === FEEDBACK COLORS === */
+  /* Clear, accessible status indicators */
+  --c-success: #059669;         /* Emerald green */
+  --c-warning: #d97706;         /* Amber */
+  --c-danger: #dc2626;          /* Red */
+  --c-info: #0284c7;            /* Sky blue */
+  
+  /* === SHADOWS & DEPTH === */
+  /* Sophisticated layering with warm undertones */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.10), 0 10px 10px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+  
+  /* Accent glows for interactive elements */
+  --glow-gold: 0 0 20px rgba(200, 121, 65, 0.25);
+  --glow-accent: 0 0 20px rgba(44, 95, 111, 0.25);
+  
+  /* === GRADIENTS === */
+  /* Smooth, professional gradients */
+  --gradient-gold: linear-gradient(135deg, var(--c-gold) 0%, var(--c-gold-light) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--c-accent) 0%, var(--c-accent-light) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--c-bg-primary) 0%, var(--c-bg-secondary) 100%);
+  
+  /* === TYPOGRAPHY === */
+  --ff-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ff-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* === TRANSITIONS === */
+  --tr-quick: 0.15s ease-out;
+  --tr-smooth: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --tr-bounce: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* === SPACING & SHAPE === */
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --wrapper: 90%;
+  --wrapper-max: 1200px;
+}
+
+/* === COMPONENT STYLES === */
+
+/* Button Variants */
+.btn--primary {
+  background: var(--gradient-gold);
+  color: var(--c-white);
+  border-color: var(--c-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(135deg, var(--c-gold-light) 0%, #f0b080 100%);
+  box-shadow: var(--shadow-lg), var(--glow-gold);
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background: transparent;
+  border: 2px solid var(--c-gold);
+  color: var(--c-gold);
+}
+
+.btn--secondary:hover {
+  background: var(--c-gold);
+  color: var(--c-white);
+  box-shadow: var(--shadow-md), var(--glow-gold);
+}
+
+.btn--accent {
+  background: var(--gradient-accent);
+  color: var(--c-white);
+  border-color: var(--c-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--accent:hover {
+  background: linear-gradient(135deg, var(--c-accent-light) 0%, #4d95ab 100%);
+  box-shadow: var(--shadow-lg), var(--glow-accent);
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+  background: var(--gradient-hero);
+}
+
+.hero-title {
+  background: linear-gradient(135deg, var(--c-text-on-dark) 0%, var(--c-gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  color: var(--c-text-light);
+}
+
+.hero-badge {
+  background: rgba(200, 121, 65, 0.1);
+  border: 1px solid var(--c-gold);
+  color: var(--c-gold);
+}
+
+/* Service Cards */
+.service-card {
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-xl);
+  border-color: var(--c-gold);
+}
+
+.service-icon {
+  color: var(--c-gold);
+}
+
+.service-card:hover .service-icon {
+  color: var(--c-accent);
+}
+
+.service-card h3 {
+  color: var(--c-text);
+}
+
+.service-card p {
+  color: var(--c-text-muted);
+}
+
+/* Section Headers */
+.section-badge {
+  background: var(--c-gold-subtle);
+  border: 1px solid var(--c-gold);
+  color: var(--c-gold-dark);
+}
+
+.section-title {
+  color: var(--c-text-on-dark);
+}
+
+.section-subtitle {
+  color: var(--c-text-light);
+}
+
+/* Section Headers on Light Backgrounds */
+.services-preview .section-title,
+.contact .section-title {
+  color: var(--c-text);
+}
+
+.services-preview .section-subtitle,
+.contact .section-subtitle {
+  color: var(--c-text-muted);
+}
+
+/* Navigation */
+.header {
+  background: rgba(26, 29, 35, 0.95);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+}
+
+.header.scrolled {
+  background: rgba(26, 29, 35, 0.98);
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid var(--c-border-dark);
+}
+
+.nav__list a:not(.btn) {
+  color: var(--c-text-on-dark);
+}
+
+.nav__list a:not(.btn)::before {
+  background: var(--gradient-gold);
+}
+
+.nav__list a:not(.btn):hover {
+  color: var(--c-gold-light);
+  text-shadow: 0 0 10px rgba(200, 121, 65, 0.3);
+}
+
+.nav__toggle span {
+  background: var(--c-text-on-dark);
+}
+
+.nav__toggle[aria-expanded="true"] span:first-child,
+.nav__toggle[aria-expanded="true"] span:last-child {
+  background: var(--c-gold);
+}
+
+/* Footer */
+.footer {
+  background: var(--c-bg-secondary);
+  border-top: 1px solid var(--c-border-dark);
+}
+
+.footer::before {
+  background: var(--gradient-gold);
+}
+
+.footer-description {
+  color: var(--c-text-light);
+}
+
+.footer-social a {
+  background: var(--c-bg-tertiary);
+  border: 1px solid var(--c-border-dark);
+  color: var(--c-text-light);
+}
+
+.footer-social a:hover {
+  background: var(--c-gold);
+  color: var(--c-white);
+  box-shadow: var(--glow-gold);
+}
+
+.footer-column h4 {
+  color: var(--c-text-on-dark);
+}
+
+.footer-column h4::after {
+  background: var(--c-gold);
+}
+
+.footer-column ul li a {
+  color: var(--c-text-light);
+}
+
+.footer-column ul li a:hover {
+  color: var(--c-text-on-dark);
+}
+
+.footer-column ul li a:hover::before {
+  background: var(--c-gold);
+}
+
+.footer-bottom p {
+  color: var(--c-text-light);
+}
+
+/* Red Flag Guide */
+.red-flag-promo {
+  background: var(--c-bg-tertiary);
+}
+
+.red-flag-promo::before {
+  background: var(--gradient-gold);
+}
+
+.red-flag-content h3 {
+  color: var(--c-text-on-dark);
+}
+
+.red-flag-content p {
+  color: var(--c-text-light);
+}
+
+.red-flag-card::before {
+  background: var(--gradient-gold);
+}
+
+.red-flag-number {
+  color: var(--c-gold);
+}
+
+/* Popup */
+.popup-overlay {
+  background: rgba(26, 29, 35, 0.9);
+}
+
+.popup-content {
+  background: var(--c-bg-card);
+  border: 2px solid var(--c-gold);
+  box-shadow: var(--shadow-2xl);
+}
+
+.popup-close {
+  color: var(--c-text-muted);
+}
+
+.popup-close:hover {
+  color: var(--c-text);
+}
+
+.popup-content h3 {
+  color: var(--c-text);
+}
+
+.popup-content p {
+  color: var(--c-text-muted);
+}
+
+.popup-form input {
+  border: 2px solid var(--c-border);
+  background: var(--c-bg-card);
+  color: var(--c-text);
+}
+
+.popup-form input:focus {
+  border-color: var(--c-gold);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(200, 121, 65, 0.1);
+}
+
+.popup-form input::placeholder {
+  color: var(--c-text-muted);
+}
+
+/* Loading Screen */
+.loading-screen {
+  background: var(--gradient-hero);
+}
+
+.loading-text {
+  color: var(--c-gold);
+}
+
+/* Scroll Progress */
+.scroll-progress {
+  background: var(--gradient-gold);
+}
+
+/* Content Sections */
+.content-section {
+  background: var(--c-bg-card);
+}
+
+.content-section:nth-child(even) {
+  background: var(--c-bg-primary);
+}
+
+.services-preview {
+  background: var(--c-bg-card);
+}
+
+.about {
+  background: var(--c-bg-primary);
+}
+
+/* Founder Section */
+.founder-content h3 {
+  color: var(--c-text-on-dark);
+}
+
+.founder-content p {
+  color: var(--c-text-light);
+}
+
+.founder-image::before {
+  border-color: var(--c-gold);
+}
+
+.founder-image img {
+  border-color: var(--c-gold);
+}
+
+/* Focus States for Accessibility */
+.btn:focus,
+.nav__list a:focus,
+.footer-social a:focus {
+  outline: 3px solid var(--c-gold);
+  outline-offset: 2px;
+}
+
+/* Skip Link */
+.skip-link {
+  background: var(--c-gold);
+  color: var(--c-white);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--c-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-gold);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--c-gold-light) 0%, var(--c-gold) 100%);
+}
+
+/* Selection */
+::selection {
+  background: var(--c-gold);
+  color: var(--c-white);
+}
+
+::-moz-selection {
+  background: var(--c-gold);
+  color: var(--c-white);
+}

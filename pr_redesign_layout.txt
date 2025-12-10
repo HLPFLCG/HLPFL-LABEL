@@ -1,0 +1,101 @@
+## Summary
+This PR redesigns the Red Flag Guide section layout to create a more balanced, harmonious, and visually appealing landing page experience.
+
+## Design Goals Achieved
+✅ Smaller, more compact container
+✅ Image positioned further to the left
+✅ Better visual balance and distribution
+✅ More harmonious first impression
+
+## Layout Changes
+
+### Container & Grid
+**Before:**
+- Grid: 1fr 2fr (flexible columns)
+- Max-width: 1000px
+- Gap: 60px
+- No padding
+
+**After:**
+- Grid: 280px 1fr (fixed image column + flexible content)
+- Max-width: 1100px with 40px padding
+- Gap: 80px (more breathing room)
+- Image column has fixed width for consistency
+
+### Image Positioning
+**Before:**
+- Max-width: 300px
+- Centered in column
+- Takes up more space
+
+**After:**
+- Max-width: 240px (20% smaller)
+- Positioned to the left (text-align: left, justify-self: start)
+- More compact and balanced
+
+### Section Sizing
+**Before:**
+- Padding: 150px (very tall)
+- Min-height: 100vh (forces full screen)
+
+**After:**
+- Padding: 100px (more compact)
+- No min-height (natural content flow)
+- Better proportion with other sections
+
+### Content Typography
+**Before:**
+- Heading: 2.5rem
+- Paragraph: 1.2rem
+- No width constraints
+
+**After:**
+- Heading: 2.2rem (more proportional)
+- Paragraph: 1.1rem (easier to read)
+- Paragraph max-width: 600px (optimal reading length)
+
+## Visual Balance
+
+### Element Distribution
+```
+[Image: 240px]  [80px gap]  [Content: Flexible]
+     ↓                           ↓
+  Compact                   Well-spaced
+  Left-aligned              Easy to read
+  Fixed width               Optimal length
+```
+
+### Spacing Hierarchy
+- Section padding: 100px (compact)
+- Gap between image/content: 80px (generous)
+- Content internal spacing: Optimized for readability
+
+## Mobile Responsive
+
+### Tablet & Mobile
+- Single column layout
+- Image centered: 220px max-width
+- Text centered for mobile viewing
+- Adjusted font sizes for readability
+- Proper padding on all devices
+
+## Benefits
+
+### Visual Harmony
+- Smaller container doesn't dominate the page
+- Left-aligned image creates natural reading flow
+- Better proportion with hero and other sections
+
+### User Experience
+- First impression is balanced and professional
+- Content is easier to scan and read
+- Clear visual hierarchy
+- Optimal reading length for text
+
+### Design Consistency
+- Matches the refined aesthetic of the site
+- Professional, modern layout
+- Clean and uncluttered appearance
+
+## Files Changed
+- css/style.css - Redesigned Red Flag Guide layout

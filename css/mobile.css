@@ -1,0 +1,555 @@
+/* Mobile-specific enhancements with wider content support */
+@media (max-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+
+  /* Mobile/Desktop Text Control */
+  .mobile-short {
+    display: block;
+  }
+  
+  .desktop-full {
+    display: none;
+  }
+
+  /* Larger touch targets for mobile */
+  .btn {
+    min-height: 48px;
+    padding: 16px 24px;
+    font-size: 1rem;
+    width: auto;
+    max-width: none;
+    font-family: var(--ff-body);
+  }
+
+  /* Better mobile navigation */
+  .nav__list {
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(20px);
+  }
+
+  .nav__list a {
+    padding: 16px 0;
+    font-size: 1.1rem;
+    font-family: var(--ff-body);
+    border-bottom: 1px solid var(--c-border);
+    letter-spacing: 0.02em;
+  }
+
+  /* Mobile-optimized hero */
+  .hero {
+    min-height: 100vh;
+    padding-top: 100px;
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    margin-bottom: 25px;
+  }
+
+  .hero__subtitle {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    margin-bottom: 40px;
+  }
+
+  /* Enhanced mobile content boxes - wider but mobile-friendly */
+  .content-box {
+    padding: 50px 30px; /* Increased from 40px 25px */
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: var(--radius-lg);
+  }
+
+  .content-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .content-box p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  /* Enhanced service cards for mobile */
+  .service-card {
+    padding: 45px 30px; /* Increased from 35px 25px */
+    width: 100%;
+    max-width: 100%;
+    min-height: 350px;
+  }
+
+  .service-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+  }
+
+  .service-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* Service items mobile enhancement */
+  .service-item {
+    min-height: auto;
+    margin-bottom: 30px;
+  }
+
+  .service-content {
+    padding: 45px 30px; /* Increased from default mobile padding */
+  }
+
+  .service-item h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+  }
+
+  .service-item p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .service-features li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-left: 25px;
+  }
+
+  /* Mobile popup adjustments */
+  .popup-content {
+    margin: 20px;
+    padding: 45px 30px; /* Increased from 35px 25px */
+    border-radius: var(--radius-lg);
+  }
+
+  .popup-form input {
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  /* Footer mobile optimization */
+  .footer-nav-column h4 {
+    font-size: 1.3rem; /* Increased from 1.2rem */
+    margin-bottom: 18px;
+  }
+
+  .footer-nav-column ul li a {
+    font-size: 1.05rem; /* Increased from 1rem */
+    padding: 10px 0; /* Increased from 8px */
+    display: block;
+  }
+
+  /* Enhanced grids for mobile */
+  .red-flag-grid,
+  .services__grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 35px; /* Increased from 25px */
+  }
+
+  /* Page header mobile */
+  .page-header {
+    padding-top: 120px;
+    padding-bottom: 70px; /* Increased from 60px */
+  }
+
+  .page-header h1 {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+  }
+
+  /* Content sections mobile */
+  .content-section {
+    padding: 90px 0; /* Increased from 80px */
+  }
+
+  .content-container {
+    padding: 0 25px; /* Increased from 20px */
+  }
+
+  /* Red flag cards mobile enhancement */
+  .red-flag-card {
+    padding: 40px 30px; /* Increased from 30px 25px */
+    width: 100%;
+    max-width: 100%;
+    border-radius: var(--radius-lg);
+  }
+
+  .red-flag-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+  }
+
+  .red-flag-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* Red flag content mobile */
+  .red-flag-content {
+    grid-template-columns: 1fr;
+    gap: 50px; /* Increased from default */
+  }
+
+  .red-flag-list li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 28px;
+  }
+
+  /* Quick reference mobile */
+  .quick-reference-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .quick-reference {
+    padding: 50px 25px; /* Increased from 40px 20px */
+  }
+
+  /* CTA section mobile */
+  .cta-section {
+    padding: 90px 25px; /* Increased from 80px 20px */
+  }
+
+  /* About section mobile enhancement */
+  .about__content {
+    gap: 50px;
+    flex-direction: column;
+  }
+
+  .about__text,
+  .about__image {
+    flex: 1 1 100%;
+  }
+
+  /* Contact section mobile enhancement */
+  .contact__content {
+    gap: 50px;
+    flex-direction: column;
+  }
+
+  .contact__info,
+  .contact__form {
+    flex: 1 1 100%;
+  }
+
+  .contact__form input,
+  .contact__form textarea {
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  /* Custom cursor hide on mobile */
+  .custom-cursor,
+  .cursor-dot {
+    display: none;
+  }
+
+  /* Enhanced container for mobile */
+  .container {
+    padding: 0 clamp(20px, 5vw, 30px); /* Increased base padding */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Tablet to mobile transition */
+  .content-box {
+    padding: 40px 25px;
+  }
+
+  .service-card {
+    padding: 35px 25px;
+  }
+
+  .service-content {
+    padding: 35px 25px;
+  }
+
+  .popup-content {
+    padding: 35px 25px;
+  }
+
+  .red-flag-card {
+    padding: 35px 25px;
+  }
+
+  .quick-reference {
+    padding: 40px 20px;
+  }
+
+  .cta-section {
+    padding: 80px 20px;
+  }
+
+  .content-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Extra small devices - maintain readability */
+  .container {
+    padding-inline: 18px; /* Increased from 15px */
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  /* Enhanced content boxes for small screens */
+  .content-box {
+    padding: 35px 22px; /* Increased from 30px 20px */
+    margin-bottom: 25px;
+  }
+
+  .content-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+  }
+
+  .content-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Service cards small screen enhancement */
+  .service-card {
+    padding: 30px 22px; /* Increased from 25px 20px */
+  }
+
+  .service-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Service content small screen */
+  .service-content {
+    padding: 30px 22px;
+  }
+
+  .service-item h3 {
+    font-size: 1.6rem;
+  }
+
+  .service-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Button enhancement for small screens */
+  .btn {
+    width: 100%;
+    max-width: 300px; /* Increased from 280px */
+    margin: 0 auto;
+    display: block;
+    padding: 16px 20px;
+    font-size: 1rem;
+    font-family: var(--ff-body);
+  }
+
+  /* Red flag content small screen */
+  .red-flag-content-wrapper {
+    gap: 35px; /* Increased from 30px */
+  }
+
+  .red-flag-card {
+    padding: 30px 22px; /* Increased from 25px 20px */
+  }
+
+  .red-flag-list li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Headings small screen */
+  .founder-content h3,
+  .red-flag-content h3,
+  .vip-content h3,
+  .shop-content h3 {
+    font-size: 1.9rem; /* Increased from 1.8rem */
+  }
+
+  /* Quick reference small screen */
+  .quick-reference {
+    padding: 35px 18px; /* Increased from 40px 20px */
+  }
+
+  /* Footer small screen enhancement */
+  .footer-nav-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .footer-nav-column ul li a {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  /* Form elements small screen */
+  .contact__form input,
+  .contact__form textarea,
+  .popup-form input,
+  .footer-form input,
+  .footer-form textarea {
+    padding: 14px; /* Increased from 12px */
+    font-size: 1rem;
+  }
+}
+
+/* High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+  :root {
+    --c-text: #ffffff;
+    --c-text-muted: #cccccc;
+    --c-border: #666666;
+  }
+
+  .content-box,
+  .service-card,
+  .red-flag-card {
+    border: 2px solid var(--c-border);
+  }
+
+  .btn {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero-video {
+    animation: none;
+  }
+
+  .service-item:hover,
+  .service-card:hover,
+  .content-box:hover {
+    transform: none;
+  }
+}
+
+/* Large text preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 18px 36px;
+    font-size: 1.1rem;
+  }
+
+  .content-box p,
+  .service-card p,
+  .service-item p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 992px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    padding-top: 80px;
+  }
+
+  .content-box,
+  .service-card {
+    padding: 40px 30px;
+  }
+
+  .page-header {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+
+/* Ultra-wide mobile screens */
+@media (max-width: 992px) and (min-width: 769px) {
+  .services__grid,
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+  }
+
+  .content-box {
+    padding: 55px 40px;
+    max-width: 800px;
+  }
+
+  .service-card {
+    padding: 45px 35px;
+  }
+}
+
+/* Red Flag Section Mobile Improvements */
+@media (max-width: 768px) {
+    .red-flag-promo {
+        padding: 80px 20px;
+        min-height: auto;
+    }
+    
+    .red-flag-content-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 50px !important;
+        padding: 0 30px !important;
+    }
+    
+    .red-flag-cover img {
+        max-width: 320px !important;
+    }
+    
+    .red-flag-content h3 {
+        font-size: 2.2rem !important;
+    }
+    
+    .red-flag-content p {
+        font-size: 1.1rem !important;
+    }
+    
+    .red-flag-content::before {
+        font-size: 2rem;
+        top: -30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .red-flag-promo {
+        padding: 60px 15px;
+    }
+    
+    .red-flag-content-wrapper {
+        gap: 40px !important;
+        padding: 0 20px !important;
+    }
+    
+    .red-flag-cover img {
+        max-width: 280px !important;
+    }
+    
+    .red-flag-content h3 {
+        font-size: 1.9rem !important;
+    }
+    
+    .red-flag-content p {
+        font-size: 1.05rem !important;
+    }
+}

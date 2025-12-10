@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WSPNJ5DR');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HLPFL | Under Construction</title>
+    
+    <!--Meta Tags/Favicon/themes/fonts-->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
+    <link rel="shortcut icon" href="images/favicon/hlpflsymbolpnggradient.ico">
+    <link rel="manifest" href="images/favicon/new/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/color-scheme.css">
+    <link rel="stylesheet" href="css/under-construction.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+
+    
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSPNJ5DR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+    <img src="images/updatedimages/loadinglogo.svg" alt="HLPFL Logo" class="loading-logo">
+    <div class="loading-text">Dreams Loading...</div>
+</div>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+    
+
+    <div class="construction-container">
+        <div class="construction-content">
+            <div class="construction-icon">🎵</div>
+            <h1 class="construction-title">Coming Soon</h1>
+            <p class="construction-subtitle">
+                We're working hard to bring you something amazing. This page is currently under construction, 
+                but we'd love to connect with you in the meantime!
+            </p>
+            <div class="lead-form">
+                <h2 class="form-title">Get Notified When We Launch</h2>
+                <form
+                    action="https://formspree.io/f/xkgqyjzd"
+                    method="POST"
+                    id="leadForm"
+                >
+                    <!-- Hidden field for email subject -->
+                    <input type="hidden" name="_subject" value="New Lead from Under Construction Page">
+                    
+                    <!-- Honeypot field for spam protection -->
+                    <input type="text" name="_gotcha" style="display:none">
+                    
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="_replyto" required placeholder="Enter your email address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">What are you interested in?</label>
+                        <select id="interest" name="interest">
+                            <option value="">Select an option</option>
+                            <option value="music-foundation">Music Foundation</option>
+                            <option value="artist-branding">Artist Branding</option>
+                            <option value="music-rights">Music Rights & Royalties</option>
+                            <option value="career-growth">Career Growth</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your music career goals..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-music"></i>
+                        Get Early Access
+                    </button>
+                </form>
+            </div>
+
+            <div class="back-home">
+                <a href="index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer"></footer>
+
+   <script>
+        // Handle form submission with AJAX
+        const form = document.getElementById('leadForm');
+        const submitBtn = form.querySelector('.submit-btn');
+        
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            
+            try {
+                // Submit to Formspree using fetch
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success!
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Success!';
+                    submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                    
+                    // Show success message
+                    alert('Thank you for your interest! We\'ll be in touch soon with updates about your music business journey.');
+                    
+                    // Reset form after 2 seconds
+                    setTimeout(() => {
+                        form.reset();
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                    }, 2000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Error handling
+                console.error('Error:', error);
+                submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error - Try Again';
+                submitBtn.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
+                
+                alert('Oops! There was an error submitting the form. Please try again or email us directly.');
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                }, 3000);
+            }
+        });
+
+        // Add ripple effect to button
+        submitBtn.addEventListener('click', function(e) {
+            if (this.disabled) return; // Don't add ripple when disabled
+            
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255,255,255,0.1);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s ease-out;
+                pointer-events: none;
+            `;
+
+            this.style.position = 'relative';
+            this.style.overflow = 'hidden';
+            this.appendChild(ripple);
+
+            setTimeout(() => ripple.remove(), 600);
+        });
+
+        // Add ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+   <!-- Form Validation -->
+   <footer class="footer"></footer>
+      <script>
+        // Hide loading screen
+        window.addEventListener('load', function() {
+          const loadingScreen = document.getElementById('loadingScreen');
+          if (loadingScreen) {
+            setTimeout(function() {
+              loadingScreen.classList.add('hidden');
+            }, 500);
+          }
+        });
+      </script>
+
+
+   <script src="js/form-validation.js"></script>
+   <!-- Enhanced Analytics Tracking -->
+   <script src="js/analytics.js"></script>
+   <script src="js/header-footer.js"></script>
+   <script src="js/animations.js"></script>
+   </body>
+</html>

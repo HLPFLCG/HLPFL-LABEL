@@ -1,0 +1,64 @@
+## Summary
+This PR updates the red flag section to match the consistent styling used throughout index.html, creating a seamless visual flow.
+
+## Problem
+The red flag section had a custom dark gradient background that didn't match the alternating white/dark pattern used in other sections of index.html.
+
+## Solution
+Updated the section to use the design system colors and match the page's established patterns.
+
+## Key Changes
+
+### Background
+- Changed from custom dark gradient to var(--c-bg-card) (white)
+- Reduced animated gradient opacity from 0.08/0.06 to 0.03 for subtlety
+- Now matches the services preview and contact sections
+
+### Typography
+- Updated heading to use var(--c-text) instead of gradient text
+- Changed paragraph text to var(--c-text-muted)
+- Colors now work properly on light background
+- Maintains readability and hierarchy
+
+### Layout
+- Reduced max-width from 1300px to 1200px (matches other sections)
+- Reduced gap from 100px to 80px for consistency
+- Reduced padding from 60px to 40px (standard container padding)
+- Better alignment with page grid system
+
+### Visual Effects
+- Simplified shadows to use design system variables
+- Reduced glow effect opacity for cleaner look
+- Maintained subtle animations for visual interest
+- Reduced decorative emoji size and opacity
+
+### Design System Integration
+- Uses var(--c-bg-card) for background
+- Uses var(--c-text) and var(--c-text-muted) for text
+- Uses var(--shadow-lg) and var(--shadow-xl) for shadows
+- Uses var(--glow-gold) for hover effects
+- Follows established spacing patterns
+
+## Visual Consistency
+
+**Before:**
+- Dark gradient background (stood out)
+- Gradient text effect
+- Heavy shadows and glows
+- Different spacing from other sections
+
+**After:**
+- White background (matches services/contact sections)
+- Standard text colors
+- Design system shadows
+- Consistent spacing throughout
+
+## Benefits
+- Seamless visual flow throughout the page
+- Better integration with design system
+- Maintains visual interest through subtle effects
+- Professional, cohesive appearance
+- Easier to maintain and update
+
+## Files Changed
+- css/style.css - Updated red flag section styling

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contract Review Checklist - HLPFL</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 2cm;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1d23;
+      background: #fff;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 3px solid #c87941;
+    }
+    
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #c87941;
+      margin-bottom: 10px;
+    }
+    
+    .header h1 {
+      font-size: 2rem;
+      color: #1a1d23;
+      margin-bottom: 10px;
+    }
+    
+    .header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+    
+    .warning-box {
+      background: #fff3cd;
+      border-left: 4px solid #ff6b6b;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 4px;
+    }
+    
+    .warning-box h3 {
+      color: #ff6b6b;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .warning-box p {
+      color: #555;
+      line-height: 1.7;
+    }
+    
+    .intro {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      border-left: 4px solid #c87941;
+    }
+    
+    .intro h2 {
+      color: #1a1d23;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    
+    .intro p {
+      color: #555;
+      line-height: 1.8;
+    }
+    
+    .section {
+      margin-bottom: 40px;
+      page-break-inside: avoid;
+    }
+    
+    .section h2 {
+      color: #c87941;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    
+    .checklist {
+      list-style: none;
+    }
+    
+    .checklist-item {
+      padding: 15px;
+      margin-bottom: 12px;
+      background: #fff;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .checklist-item.critical {
+      border-color: #ff6b6b;
+      background: #fff5f5;
+    }
+    
+    .checkbox {
+      width: 24px;
+      height: 24px;
+      border: 2px solid #c87941;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .checklist-item.critical .checkbox {
+      border-color: #ff6b6b;
+    }
+    
+    .checklist-content h3 {
+      color: #1a1d23;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    
+    .checklist-item.critical .checklist-content h3 {
+      color: #ff6b6b;
+    }
+    
+    .checklist-content p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    
+    .red-flag {
+      background: #fff5f5;
+      border-left: 4px solid #ff6b6b;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    
+    .red-flag h4 {
+      color: #ff6b6b;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+    
+    .red-flag p {
+      color: #555;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    .tip-box {
+      background: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 4px;
+    }
+    
+    .tip-box h3 {
+      color: #4caf50;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .tip-box p {
+      color: #555;
+      line-height: 1.7;
+    }
+    
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid #e0e0e0;
+      text-align: center;
+      color: #666;
+    }
+    
+    .footer h3 {
+      color: #1a1d23;
+      margin-bottom: 15px;
+    }
+    
+    .footer p {
+      margin-bottom: 10px;
+    }
+    
+    .footer a {
+      color: #c87941;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    @media print {
+      body {
+        background: #fff;
+      }
+      
+      .checklist-item {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">HLPFL</div>
+      <h1>Music Contract Review Checklist</h1>
+      <p>Protect Yourself Before You Sign</p>
+    </div>
+    
+    <div class="warning-box">
+      <h3>⚠️ Critical Warning</h3>
+      <p>This checklist is for educational purposes only and does not constitute legal advice. ALWAYS have a qualified entertainment attorney review any contract before signing. A bad contract can cost you millions and decades of your career.</p>
+    </div>
+    
+    <div class="intro">
+      <h2>Why Contract Review Matters</h2>
+      <p>In the music industry, your contracts define your career. They determine who owns your music, how you get paid, and what rights you retain. Many artists have lost millions because they didn't understand what they were signing. This checklist helps you identify red flags and understand key terms before committing to any agreement.</p>
+    </div>
+    
+    <div class="section">
+      <h2>Essential Contract Elements</h2>
+      <ul class="checklist">
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Parties Clearly Identified</h3>
+            <p>Verify all parties are correctly named with full legal names and addresses. Check that the signing entity has authority to enter the agreement.</p>
+          </div>
+        </li>
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Scope of Work Defined</h3>
+            <p>Ensure the contract clearly states what you're agreeing to deliver (number of songs, albums, performances, etc.) and the timeline.</p>
+          </div>
+        </li>
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Payment Terms Specified</h3>
+            <p>Understand exactly how much you'll be paid, when, and under what conditions. Look for advance amounts, royalty rates, and payment schedules.</p>
+          </div>
+        </li>
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Rights and Ownership Clear</h3>
+            <p>Know who owns the masters, publishing, and other intellectual property. This is often the most valuable part of any music deal.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Term Length Reasonable</h3>
+            <p>Check how long the contract lasts. Be wary of perpetual terms or automatic renewals without your consent.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>Recording Contract Red Flags</h2>
+      <ul class="checklist">
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>360 Deal Terms</h3>
+            <p>Check if the label takes a percentage of ALL your income (touring, merch, endorsements). Understand what percentage and for how long.</p>
+          </div>
+        </li>
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Recoupment Clauses</h3>
+            <p>Understand what expenses are recoupable from your royalties. Marketing, videos, and production costs can keep you in debt forever.</p>
+          </div>
+        </li>
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Master Ownership</h3>
+            <p>Determine if you'll ever own your masters. Some deals offer reversion after a certain period or sales threshold.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Royalty Rate Structure</h3>
+            <p>Verify the royalty percentage and what it's calculated on (wholesale, retail, or net). Industry standard is 15-20% for new artists.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Controlled Composition Clause</h3>
+            <p>Check if there's a cap on mechanical royalties for songs you write. This can significantly reduce your publishing income.</p>
+          </div>
+        </li>
+      </ul>
+      
+      <div class="red-flag">
+        <h4>🚩 Major Red Flag: Perpetual Rights</h4>
+        <p>If a contract gives the label rights to your music "in perpetuity" (forever) without reversion clauses, think very carefully. You're giving up ownership of your life's work permanently.</p>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>Publishing Agreement Checklist</h2>
+      <ul class="checklist">
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Copyright Ownership</h3>
+            <p>Verify whether you're assigning copyright or just granting administration rights. NEVER give up copyright if you can avoid it.</p>
+          </div>
+        </li>
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Writer's Share vs Publisher's Share</h3>
+            <p>Understand the split. You should always keep 100% of the writer's share. Publisher's share is negotiable (typically 50/50 or better).</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Territory Coverage</h3>
+            <p>Check if the deal is worldwide or specific territories. You might want to keep certain territories for yourself.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Advance and Recoupment</h3>
+            <p>Know the advance amount and what it's recoupable from. Some deals recoup from writer's share (bad) vs publisher's share (better).</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Reversion Rights</h3>
+            <p>Ensure there's a clause allowing songs to revert to you if the publisher doesn't exploit them within a certain timeframe.</p>
+          </div>
+        </li>
+      </ul>
+      
+      <div class="red-flag">
+        <h4>🚩 Major Red Flag: Copyright Assignment</h4>
+        <p>Be extremely cautious of any deal that requires you to assign (transfer ownership of) your copyrights. Administration deals are almost always better than ownership transfers.</p>
+      </div>
+    </div>
+    
+    <div class="tip-box">
+      <h3>✅ Pro Tip: Negotiation Power</h3>
+      <p>Everything in a contract is negotiable. Don't accept the first offer. Common negotiation points include: royalty rates, advance amounts, term length, reversion clauses, and creative control. Having a lawyer negotiate for you often pays for itself many times over.</p>
+    </div>
+    
+    <div class="section">
+      <h2>Performance & Booking Contracts</h2>
+      <ul class="checklist">
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Performance Fee Confirmed</h3>
+            <p>Verify the exact payment amount, when it's due (deposit, day-of, net-30), and payment method.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Technical Rider Attached</h3>
+            <p>Ensure your technical requirements (sound, lights, stage size) are clearly specified and agreed to.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Hospitality Rider Included</h3>
+            <p>Specify what the venue provides (meals, drinks, green room, parking, accommodation if applicable).</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Cancellation Terms</h3>
+            <p>Understand cancellation policies for both parties, including force majeure clauses and kill fees.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Merchandise Rights</h3>
+            <p>Clarify if you can sell merchandise, what percentage the venue takes, and who handles sales.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>Collaboration & Production Agreements</h2>
+      <ul class="checklist">
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Ownership Splits Defined</h3>
+            <p>Clearly state percentage ownership for each collaborator. Put it in writing BEFORE creating anything.</p>
+          </div>
+        </li>
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Credit Attribution</h3>
+            <p>Specify how each person will be credited (producer, writer, featured artist, etc.) on all releases.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Sample Clearance Responsibility</h3>
+            <p>Determine who's responsible for clearing samples and what happens if clearance is denied or too expensive.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Decision-Making Process</h3>
+            <p>Establish how decisions are made about releases, licensing, and other uses of the collaborative work.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Dispute Resolution</h3>
+            <p>Include a process for resolving disagreements (mediation, arbitration) before they become lawsuits.</p>
+          </div>
+        </li>
+      </ul>
+      
+      <div class="red-flag">
+        <h4>🚩 Major Red Flag: Verbal Agreements</h4>
+        <p>NEVER rely on verbal agreements in the music industry. "We'll figure it out later" has destroyed countless friendships and careers. Get everything in writing, even with friends.</p>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>Management & Agency Contracts</h2>
+      <ul class="checklist">
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Commission Rate</h3>
+            <p>Verify the percentage (typically 15-20% for management, 10-15% for booking). Check what income it applies to.</p>
+          </div>
+        </li>
+        <li class="checklist-item critical">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Sunset Clause</h3>
+            <p>Ensure commissions don't continue forever after the relationship ends. Typical sunset is 6-12 months on deals made during the term.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Key Person Clause</h3>
+            <p>If you're signing with a specific person, ensure the contract terminates if they leave the company.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Performance Benchmarks</h3>
+            <p>Include measurable goals that allow you to terminate if not met (income thresholds, booking minimums, etc.).</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Expense Reimbursement</h3>
+            <p>Clarify what expenses the manager can incur on your behalf and how they're reimbursed or recouped.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>General Contract Review Points</h2>
+      <ul class="checklist">
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Termination Clauses</h3>
+            <p>Understand how either party can end the agreement and what happens to rights and obligations afterward.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Audit Rights</h3>
+            <p>Ensure you have the right to audit the other party's books to verify accurate royalty payments.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Indemnification</h3>
+            <p>Check what you're indemnifying (protecting) the other party from. Avoid overly broad indemnification clauses.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Governing Law</h3>
+            <p>Note which state's laws govern the contract. This affects where disputes would be resolved.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Assignment Rights</h3>
+            <p>Check if the other party can assign the contract to someone else without your consent.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Force Majeure</h3>
+            <p>Understand what happens if unforeseen circumstances (pandemic, natural disaster) prevent performance.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="tip-box">
+      <h3>✅ Pro Tip: The 72-Hour Rule</h3>
+      <p>Never sign a contract the day you receive it, no matter how excited you are. Take at least 72 hours to review, research, and consult with advisors. Legitimate opportunities will still be there in three days. Pressure to sign immediately is a red flag.</p>
+    </div>
+    
+    <div class="section">
+      <h2>Questions to Ask Before Signing</h2>
+      <ul class="checklist">
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>What's the worst-case scenario?</h3>
+            <p>If everything goes wrong, what's the maximum you could lose? Can you afford that risk?</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Can I get out if needed?</h3>
+            <p>What are the exit options if the relationship isn't working? Are they reasonable?</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Who else has signed with them?</h3>
+            <p>Research the other party's track record. Talk to other artists who've worked with them.</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>What am I giving up?</h3>
+            <p>List everything you're surrendering (rights, time, money, creative control). Is it worth what you're getting?</p>
+          </div>
+        </li>
+        <li class="checklist-item">
+          <div class="checkbox"></div>
+          <div class="checklist-content">
+            <h3>Do I understand every clause?</h3>
+            <p>If there's anything you don't fully understand, get clarification before signing. Ignorance isn't a defense.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="footer">
+      <h3>Need Professional Contract Review?</h3>
+      <p>HLPFL works with experienced entertainment attorneys to review your contracts.</p>
+      <p>Don't risk your career on a bad deal. Get expert review: <a href="https://calendly.com/founder-hlpfl/30min">Book Consultation</a></p>
+      <p>Visit us: <a href="https://hlpfl.org">hlpfl.org</a></p>
+      <p style="margin-top: 30px; font-size: 0.9rem;">© 2025 HLPFL Consulting. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

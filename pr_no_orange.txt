@@ -1,0 +1,51 @@
+## Summary
+This PR completely removes ALL orange/gold colors from the red flag section, replacing them with the teal/blue accent color for a cohesive look.
+
+## Problem
+The red flag section still had orange/gold colors in multiple places:
+- Background gradient glow
+- Top accent line
+- Image glow effect
+- Button hover glow
+
+This made the section stand out with orange when it should match the rest of the page.
+
+## Solution
+Replaced EVERY instance of orange/gold with teal/blue accent color.
+
+## Changes Made
+
+### Background Gradient
+- Before: rgba(200, 121, 65, 0.03) - ORANGE
+- After: rgba(44, 95, 111, 0.04) - TEAL
+- Both gradient circles now use teal
+
+### Top Accent Line
+- Before: var(--c-gold) - ORANGE
+- After: var(--c-accent) - TEAL
+- Subtle line at top now matches accent color
+
+### Image Glow Effect
+- Before: rgba(200, 121, 65, 0.08) - ORANGE
+- After: rgba(44, 95, 111, 0.08) - TEAL
+- Pulsing glow behind cover image now teal
+
+### Button Hover Glow
+- Before: var(--glow-gold) - ORANGE
+- After: var(--glow-accent) - TEAL
+- Button hover effect now matches accent color
+
+## Color Reference
+- Orange/Gold removed: rgba(200, 121, 65) / var(--c-gold)
+- Teal/Accent used: rgba(44, 95, 111) / var(--c-accent)
+
+## Result
+The red flag section now has ZERO orange/gold colors. It uses only:
+- White background (var(--c-bg-card))
+- Dark text (var(--c-text))
+- Teal accent color (var(--c-accent))
+
+This creates a clean, cohesive look that matches the professional design of the rest of the page.
+
+## Files Changed
+- css/style.css - Replaced all orange with teal in red flag section

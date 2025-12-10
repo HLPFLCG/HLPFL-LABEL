@@ -1,0 +1,25 @@
+## Summary
+This PR improves the Formspree integration with proper field names and configuration.
+
+## Key Changes
+
+### 1. Proper Form Structure
+- Moved form tag inside the lead-form div for correct HTML structure
+- All form fields are now properly contained within the form tags
+
+### 2. Formspree Special Fields
+- Added _subject hidden field for email subject line
+- Changed email field name to _replyto (Formspree special field)
+- Added _gotcha honeypot field for spam protection
+
+### 3. Benefits
+- Better email organization with custom subject lines
+- Direct reply capability to user emails
+- Automatic spam protection without CAPTCHA
+- Follows Formspree best practices
+
+## Testing
+After merging, please test the form submission to verify it works correctly.
+
+## Files Changed
+- under-construction.html - Improved form structure and Formspree configuration
