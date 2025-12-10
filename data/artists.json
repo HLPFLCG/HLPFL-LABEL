@@ -1,0 +1,122 @@
+{
+  "artists": [
+    {
+      "id": "artist-001",
+      "name": "Luna Echo",
+      "genre": "Pop / Electronic",
+      "image": "images/artists/luna-echo.jpg",
+      "bio": "Luna Echo blends ethereal vocals with cutting-edge electronic production to create a sound that's both intimate and expansive. Her music explores themes of love, technology, and human connection in the digital age.",
+      "spotify": "https://open.spotify.com/artist/1234567890",
+      "apple": "https://music.apple.com/artist/luna-echo",
+      "instagram": "https://instagram.com/lunaecho",
+      "youtube": "https://youtube.com/lunaecho",
+      "soundcloud": "https://soundcloud.com/lunaecho",
+      "releases": [
+        {
+          "title": "Digital Dreams",
+          "type": "Album",
+          "year": "2024",
+          "tracks": 12,
+          "cover": "images/releases/digital-dreams.jpg"
+        },
+        {
+          "title": "Neon Nights",
+          "type": "Single", 
+          "year": "2023",
+          "tracks": 1,
+          "cover": "images/releases/neon-nights.jpg"
+        }
+      ],
+      "stats": {
+        "monthly_listeners": "245K",
+        "followers": "189K",
+        "plays": "12.5M"
+      },
+      "tour": [
+        {
+          "date": "2024-03-15",
+          "venue": "The Fillmore",
+          "city": "San Francisco",
+          "country": "USA",
+          "ticket_link": "https://ticketmaster.com/luna-echo-sf"
+        }
+      ]
+    },
+    {
+      "id": "artist-002", 
+      "name": "Marcus Rivers",
+      "genre": "Hip-Hop / R&B",
+      "image": "images/artists/marcus-rivers.jpg",
+      "bio": "Marcus Rivers brings authentic storytelling to modern hip-hop, combining smooth R&B melodies with hard-hitting beats. His lyrics reflect his journey from the streets to success, inspiring listeners worldwide.",
+      "spotify": "https://open.spotify.com/artist/2345678901",
+      "apple": "https://music.apple.com/artist/marcus-rivers",
+      "instagram": "https://instagram.com/marcusrivers",
+      "youtube": "https://youtube.com/marcusrivers",
+      "soundcloud": "https://soundcloud.com/marcusrivers",
+      "releases": [
+        {
+          "title": "Rivers Flow",
+          "type": "Album",
+          "year": "2024",
+          "tracks": 15,
+          "cover": "images/releases/rivers-flow.jpg"
+        }
+      ],
+      "stats": {
+        "monthly_listeners": "512K",
+        "followers": "342K", 
+        "plays": "28.3M"
+      }
+    },
+    {
+      "id": "artist-003",
+      "name": "The Velvet Underground",
+      "genre": "Indie Rock",
+      "image": "images/artists/velvet-underground.jpg",
+      "bio": "The Velvet Underground redefines indie rock with their unique blend of psychedelic melodies and raw energy. Their live performances are legendary, creating unforgettable experiences for fans.",
+      "spotify": "https://open.spotify.com/artist/3456789012",
+      "apple": "https://music.apple.com/artist/the-velvet-underground",
+      "instagram": "https://instagram.com/velvetunderground",
+      "youtube": "https://youtube.com/thevelvetunderground",
+      "releases": [
+        {
+          "title": "Midnight Sessions",
+          "type": "EP",
+          "year": "2024",
+          "tracks": 6,
+          "cover": "images/releases/midnight-sessions.jpg"
+        }
+      ],
+      "stats": {
+        "monthly_listeners": "128K",
+        "followers": "89K",
+        "plays": "7.2M"
+      }
+    },
+    {
+      "id": "artist-004",
+      "name": "Sophie Chen",
+      "genre": "Classical Crossover",
+      "image": "images/artists/sophie-chen.jpg",
+      "bio": "Sophie Chen bridges the gap between classical and contemporary music, bringing violin virtuosity to modern audiences. Her performances combine technical mastery with emotional depth.",
+      "spotify": "https://open.spotify.com/artist/4567890123",
+      "apple": "https://music.apple.com/artist/sophie-chen",
+      "instagram": "https://instagram.com/sophiechenmusic",
+      "youtube": "https://youtube.com/sophiechen",
+      "releases": [
+        {
+          "title": "String Theory",
+          "type": "Album",
+          "year": "2024",
+          "tracks": 10,
+          "cover": "images/releases/string-theory.jpg"
+        }
+      ],
+      "stats": {
+        "monthly_listeners": "89K",
+        "followers": "67K",
+        "plays": "4.1M"
+      }
+    }
+  ]
+}
