@@ -1,66 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WSPNJ5DR');</script>
-  <!-- End Google Tag Manager -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSPNJ5DR');</script>
+<!-- End Google Tag Manager -->
 
-  <title>HLPFL | Services for Artists</title>
-  <meta name="description" content="Comprehensive services for independent musicians including legal foundation, artist branding, music rights management, and career growth strategies.">
-  <meta charset="UTF-8">
-  <link rel="canonical" href="https://hlpfl.org/services">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HLPFL Records | Services - Complete Artist Development</title>
+<meta name="description" content="Professional record label services including artist development, music production, distribution, marketing, and A&R. Book with secure Stripe payment.">
+<meta charset="UTF-8">
+<link rel="canonical" href="https://hlpfl.org/services/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!--Meta Tags/Favicon/themes/fonts-->
+<link rel="apple-touch-icon" sizes="180x180" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
+<link rel="shortcut icon" href="images/favicon/hlpflsymbolpnggradient.ico">
+<link rel="manifest" href="images/favicon/new/site.webmanifest">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="theme-color" content="#000000">
 
-    <!--Meta Tags/Favicon/themes/fonts-->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
-    <link rel="shortcut icon" href="images/favicon/hlpflsymbolpnggradient.ico">
-    <link rel="manifest" href="images/favicon/new/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#000000">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Record Label Services - HLPFL Records">
+<meta property="og:description" content="Professional record label services for independent artists including artist development, music production, distribution, marketing, and A&R.">
+<meta property="og:image" content="https://hlpfl.org/og-cover.jpg">
 
+<!-- Stripe.js -->
+<script src="https://js.stripe.com/v3/"></script>
 
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/mobile.css">
+<link rel="stylesheet" href="css/mobile-fixes.css">
+<link rel="stylesheet" href="css/color-scheme.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
 
-  <!-- Open Graph -->
+<!-- Enhanced Services Styles -->
+<style>
+/* Services Grid */
+.services-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Music Business Services - HLPFL">
-  <meta property="og:description" content="Comprehensive services for independent musicians including legal foundation, artist branding, music rights management, and career growth strategies.">
-  <meta property="og:image" content="https://hlpfl.org/images/og/services-cover.jpg">
-  <meta property="og:url" content="https://hlpfl.org/services">
+.service-card-enhanced {
+  background: var(--color-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+  border: 1px solid var(--color-border);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 
+.service-card-enhanced:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-gold);
+}
 
+.service-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #c87941, #d89055);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+}
 
-  <!-- Stylesheets -->
+.service-header {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
 
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/mobile.css">
-  <link rel="stylesheet" href="css/mobile-fixes.css">
-  <link rel="stylesheet" href="css/color-scheme.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(200, 121, 65, 0.8), rgba(0, 0, 0, 0.7));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
 
+.service-title {
+  color: white;
+  font: 700 1.6rem var(--font-display);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
 
+.service-category {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
+.service-content {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-description {
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.service-features {
+  margin-bottom: 25px;
+}
+
+.service-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-features li {
+  color: var(--color-text);
+  padding: 8px 0;
+  position: relative;
+  padding-left: 25px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.service-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-gold);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.service-footer {
+  margin-top: auto;
+  padding-top: 25px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.service-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-amount {
+  font: 700 2rem var(--font-display);
+  color: var(--color-gold);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.service-duration {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.service-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-service {
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition-quick);
+  font-size: 0.9rem;
+  text-align: center;
+  min-width: 120px;
+}
+
+.btn-service--primary {
+  background: var(--color-gold);
+  color: white;
+}
+
+.btn-service--primary:hover {
+  background: #d89055;
+  transform: translateY(-2px);
+}
+
+.btn-service--secondary {
+  background: transparent;
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+}
+
+.btn-service--secondary:hover {
+  background: var(--color-gold);
+  color: white;
+}
+
+/* Filter Section */
+.services-filter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 2px solid var(--color-border);
+  background: var(--color-secondary);
+  color: var(--color-text);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all var(--transition-quick);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background: rgba(200, 121, 65, 0.1);
+}
+
+/* Service Detail Modal */
+.service-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.service-modal-content {
+  background: var(--color-secondary);
+  margin: 50px auto;
+  max-width: 900px;
+  border-radius: var(--radius-lg);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.modal-body {
+  padding: 40px;
+}
+
+.timeline {
+  margin-top: 30px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.timeline-marker {
+  width: 60px;
+  height: 60px;
+  background: var(--color-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  flex: 1;
+  padding-top: 5px;
+}
+
+.timeline-title {
+  font: 700 1.2rem var(--font-display);
+  color: var(--color-white);
+  margin-bottom: 5px;
+}
+
+.timeline-description {
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-text);
+}
+
+/* Payment Processing */
+.payment-processing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.payment-content {
+  text-align: center;
+  color: white;
+}
+
+.payment-spinner {
+  width: 60px;
+  height: 60px;
+  border: 3px solid var(--color-border);
+  border-top: 3px solid var(--color-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+/* Success Message */
+.success-message {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  padding: 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin: 20px 0;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
   
+  .service-modal-content {
+    margin: 20px;
+    max-height: 95vh;
+  }
+  
+  .modal-body {
+    padding: 25px;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .service-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .service-actions {
+    width: 100%;
+  }
+  
+  .btn-service {
+    flex: 1;
+  }
+}
+</style>
 
+<!-- JSON-LD Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "HLPFL Records",
+  "description": "Independent record label helping artists launch successful music careers.",
+  "url": "https://hlpfl.org",
+  "logo": "https://hlpfl.org/images/updatedimages/hlpflsvggradientsymbol copy.svg"
+}
+</script>
 
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 
-
 </head>
-
-
 
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -70,8 +456,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Loading Screen -->
 <div class="loading-screen" id="loadingScreen">
-    <img src="images/favicon/hlpflsvggradientsymbol.svg" alt="HLPFL Logo" class="loading-logo">
-    <div class="loading-text">Dreams Loading...</div>
+    <img src="images/favicon/hlpflsvggradientsymbol.svg" alt="HLPFL Records Logo" class="loading-logo">
+    <div class="loading-text">Services Loading...</div>
+</div>
+
+<!-- Payment Processing Overlay -->
+<div id="paymentProcessing" class="payment-processing">
+    <div class="payment-content">
+        <div class="payment-spinner"></div>
+        <h2>Processing Payment...</h2>
+        <p>Securing your service booking. Please wait.</p>
+    </div>
 </div>
 
 <!-- Scroll Progress Bar -->
@@ -81,16 +476,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="header" id="header">
     <div class="container">
         <a href="/" class="logo">
-            <img src="images/favicon/hlpflsvggradientsymbol.svg" alt="HLPFL">
+            <img src="images/favicon/hlpflsvggradientsymbol.svg" alt="HLPFL Records">
         </a>
         <nav class="nav">
             <ul class="nav__list" id="navList">
                     <li><a href="about.html">About</a></li>
+                    <li><a href="artists.html">Artists</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="vip.html">VIPs</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://calendly.com/founder-hlpfl/30min" class="btn btn--primary" target="_blank">Book Call</a></li>
+                    <li><a href="music.html">Music</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="contact.html">Submit Demo</a></li>
+                <li><a href="https://calendly.com/founder-hlpfl/30min" class="btn btn--primary" target="_blank">Book A&R Call</a></li>
             </ul>
             <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
@@ -101,382 +497,513 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </header>
 
-  <!-- Hero Section -->
-
-
-  <section class="hero-section">
+<!-- Hero Section -->
+<section class="hero-section">
     <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">Our Services</h1>
-        <p class="hero-subtitle">Everything you need to transform your musical talent into a thriving, legally compliant business.</p>
-      </div>
+        <div class="hero-content fade-in-up">
+            <h1 class="hero-title">Professional Services</h1>
+            <p class="hero-subtitle">
+                Comprehensive record label services designed to transform your musical talent into a successful career. 
+                From artist development to distribution, we've got you covered.
+            </p>
+        </div>
     </div>
-  </section>
+</section>
 
-
-
-  <!-- Services Section -->
-
-
-  <section class="services-section">
-    <div class="container">
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-building"></i>
-          </div>
-          <h3>Legal Foundation</h3>
-          <p>Entity formation, operating agreements, contracts, and compliance frameworks that protect your music business from day one.</p>
+<!-- Services Section -->
+<section class="content-section">
+    <div class="services-container">
+        <div class="section-header fade-in-up">
+            <div class="section-badge">Our Services</div>
+            <h2 class="section-title">Complete Artist Solutions</h2>
+            <p class="section-subtitle">
+                Professional services with secure payment processing. Choose the perfect package for your career goals.
+            </p>
         </div>
 
+        <!-- Filter Buttons -->
+        <div class="services-filter" id="servicesFilter">
+            <button class="filter-btn active" data-category="all">All Services</button>
+            <button class="filter-btn" data-category="development">Development</button>
+            <button class="filter-btn" data-category="production">Production</button>
+            <button class="filter-btn" data-category="distribution">Distribution</button>
+            <button class="filter-btn" data-category="a&r">A&R</button>
+            <button class="filter-btn" data-category="branding">Branding</button>
+            <button class="filter-btn" data-category="live">Live Events</button>
+        </div>
 
+        <!-- Services Grid -->
+        <div id="servicesGrid" class="services-grid">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading amazing services...</p>
+            </div>
+        </div>
 
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-palette"></i>
-      </div>
-      <h3>Artist Branding</h3>
-      <p>Stunning visual identity, professional websites, and marketing materials that make your music brand unforgettable to fans and industry pros.</p>
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message">
+            <h3>🎉 Payment Successful!</h3>
+            <p>Thank you for choosing HLPFL Records. We'll contact you within 24 hours to get started.</p>
+        </div>
     </div>
+</section>
 
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-music"></i>
-      </div>
-      <h3>Music Rights & Royalties</h3>
-      <p>Copyright protection, royalty collection setup, and licensing frameworks that ensure you get paid for every stream, play, and use of your music.</p>
+<!-- Service Detail Modal -->
+<div id="serviceModal" class="service-modal">
+    <div class="service-modal-content">
+        <button class="modal-close" onclick="closeServiceModal()">&times;</button>
+        <div id="serviceModalContent">
+            <!-- Dynamic content will be loaded here -->
+        </div>
     </div>
-
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-rocket"></i>
-      </div>
-      <h3>Career Growth</h3>
-      <p>Music business strategy, market positioning, and growth frameworks that turn your talent into a sustainable career and revenue stream.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-ticket-alt"></i>
-      </div>
-      <h3>Tour & Event Management</h3>
-      <p>Systems, processes, and logistics planning that streamline your performances and maximize revenue from live shows and events.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-users"></i>
-      </div>
-      <h3>Team Building</h3>
-      <p>Building your music business team with the right managers, agents, and support staff that help take your career to the next level.</p>
-    </div>
-    
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-chart-line"></i>
-      </div>
-      <h3>Digital Strategy</h3>
-      <p>Social media management, streaming platform optimization, and digital marketing campaigns that grow your audience and increase your streams.</p>
-    </div>
-    
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-handshake"></i>
-      </div>
-      <h3>Industry Networking</h3>
-      <p>Strategic introductions, relationship building, and industry connections that open doors to labels, publishers, and other key music industry players.</p>
-    </div>
-    
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-money-bill-wave"></i>
-      </div>
-      <h3>Financial Management</h3>
-      <p>Accounting systems, tax planning, and financial strategies specifically designed for musicians to maximize income and minimize tax burden.</p>
-    </div>
-  </div>
 </div>
 
-  </section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-brand fade-in-up">
+                <img src="images/footer/footerlogowebsitev1.webp" alt="HLPFL Records" class="footer-logo" loading="lazy">
+                <p class="footer-description">
+                    Transforming musical talent into success stories. We help independent artists launch successful music careers 
+                    through comprehensive record label services and artist development.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
 
-
-
-  <!-- Footer -->
-
-
-   <!-- Footer -->
-   <footer class="footer">
-       <div class="container">
-           <div class="footer-main">
-               <div class="footer-brand fade-in-up">
-                   <img src="images/footer/footerlogowebsitev1.webp" alt="HLPFL" class="footer-logo" loading="lazy">
-                   <p class="footer-description">
-                       Transforming music career chaos into clarity. We help independent musicians build legally solid, 
-                       privacy-first businesses with standout brands.
-                   </p>
-                   <div class="footer-social">
-                       <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                       <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                       <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                       <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                   </div>
-               </div>
-
-                <div class="footer-column fade-in-up" style="animation-delay: 0.1s">
-                   <h4>Services</h4>
-                       <ul>
-                       <li><a href="under-construction.html">Legal Foundation</a></li>
-                       <li><a href="under-construction.html">Artist Branding</a></li>
-                       <li><a href="under-construction.html">Music Rights & Royalties</a></li>
-                       <li><a href="under-construction.html">Career Growth</a></li>
-                       </ul>
-               </div>
-
-               <div class="footer-column fade-in-up" style="animation-delay: 0.2s">
-                   <h4>Resources</h4>
-                       <ul>
-                       <li><a href="under-construction.html">Templates & Guides</a></li>
-                       <li><a href="under-construction.html">VIP Program</a></li>
-                       <li><a href="#" onclick="openRedFlagPopup()">Red Flag Guide</a></li>
-                       <li><a href="under-construction.html">Free Consultation</a></li>
-                       </ul>
-               </div>
-
-
-               <div class="footer-column fade-in-up" style="animation-delay: 0.3s">
-                   <h4>Company</h4>
+             <div class="footer-column fade-in-up" style="animation-delay: 0.1s">
+                <h4>Services</h4>
                     <ul>
-                       <li><a href="about.html">About</a></li>
-                       <li><a href="contact.html">Contact</a></li>
-                       <li><a href="under-construction.html">Privacy Policy</a></li>
-                       <li><a href="under-construction.html">Terms of Service</a></li>
+                    <li><a href="services.html">Artist Development</a></li>
+                    <li><a href="services.html">Music Production</a></li>
+                    <li><a href="services.html">Distribution</a></li>
+                    <li><a href="services.html">A&R Services</a></li>
                     </ul>
-               </div>
+            </div>
 
-           <div class="footer-bottom fade-in-up">
-               <p>2019 HLPFL. All rights reserved. Built with care for musicians.</p>
-           </div>
-       </div>
-   </footer>
+            <div class="footer-column fade-in-up" style="animation-delay: 0.2s">
+                <h4>Music</h4>
+                    <ul>
+                    <li><a href="artists.html">Our Artists</a></li>
+                    <li><a href="music.html">Releases</a></li>
+                    <li><a href="shop.html">Merchandise</a></li>
+                    <li><a href="#" onclick="openRedFlagPopup()">Demo Submissions</a></li>
+                    </ul>
+            </div>
 
+            <div class="footer-column fade-in-up" style="animation-delay: 0.3s">
+                <h4>Company</h4>
+                 <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="under-construction.html">Terms of Service</a></li>
+                 </ul>
+            </div>
 
+        <div class="footer-bottom fade-in-up">
+            <p>2019 HLPFL Records. All rights reserved. Built with passion for music artists.</p>
+        </div>
+    </div>
+</footer>
 
-  <!-- Scripts -->
-
-
- <!-- JavaScript -->
+<!-- JavaScript -->
 <script src="js/menu-injector.js"></script>
 <script>
-    // Loading Screen
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            document.getElementById('loadingScreen').classList.add('hidden');
-        }, 500);
-    });
+// Services Management System
+class ServicesManager {
+    constructor() {
+        this.services = [];
+        this.filteredServices = [];
+        this.currentFilter = 'all';
+        this.stripe = null;
+        this.init();
+    }
 
-    // Header Scroll Effect
-    const header = document.getElementById('header');
-    const scrollProgress = document.getElementById('scrollProgress');
+    async init() {
+        try {
+            await this.loadServices();
+            this.setupStripe();
+            this.setupEventListeners();
+            this.renderServices();
+        } catch (error) {
+            console.error('Failed to initialize services manager:', error);
+            this.showError();
+        }
+    }
 
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
+    setupStripe() {
+        // Initialize Stripe with your publishable key
+        this.stripe = Stripe('pk_test_51234567890abcdefghijklmnopqrstuvwxyz'); // Replace with actual key
+    }
 
-        // Header background
-        if (scrolled > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+    async loadServices() {
+        try {
+            const response = await fetch('data/services.json');
+            const data = await response.json();
+            this.services = data.services;
+            this.filteredServices = [...this.services];
+        } catch (error) {
+            console.error('Error loading services:', error);
+            // Fallback services data
+            this.services = this.getFallbackServices();
+            this.filteredServices = [...this.services];
+        }
+    }
+
+    getFallbackServices() {
+        return [
+            {
+                id: "artist-development",
+                title: "Artist Development Program",
+                category: "Development",
+                price: 2999,
+                priceDisplay: "$2,999",
+                duration: "3 Months",
+                description: "Comprehensive artist development program designed to transform talented musicians into professional artists.",
+                features: [
+                    "Vocal coaching and technique improvement",
+                    "Songwriting workshops and collaboration sessions",
+                    "Performance training and stage presence development",
+                    "Personal branding and image consulting"
+                ],
+                stripePriceId: "price_test_artist_development"
+            },
+            {
+                id: "music-production",
+                title: "Professional Music Production",
+                category: "Production",
+                price: 4999,
+                priceDisplay: "$4,999",
+                duration: "Per Project",
+                description: "Full-service music production package from concept to final mastered tracks.",
+                features: [
+                    "Professional song production and arrangement",
+                    "Multi-track recording in state-of-the-art studio",
+                    "Professional mixing and mastering",
+                    "Access to premium instruments and equipment"
+                ],
+                stripePriceId: "price_test_music_production"
+            }
+        ];
+    }
+
+    setupEventListeners() {
+        // Filter buttons
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                this.currentFilter = e.target.dataset.category;
+                this.filterServices();
+            });
+        });
+    }
+
+    filterServices() {
+        this.filteredServices = this.services.filter(service => {
+            return this.currentFilter === 'all' ||
+                service.category.toLowerCase().includes(this.currentFilter.toLowerCase());
+        });
+        
+        this.renderServices();
+    }
+
+    renderServices() {
+        const grid = document.getElementById('servicesGrid');
+        
+        if (this.filteredServices.length === 0) {
+            grid.innerHTML = `
+                <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
+                    <i class="fas fa-search" style="font-size: 3rem; color: var(--color-gold); margin-bottom: 20px;"></i>
+                    <h3 style="color: var(--color-white); margin-bottom: 10px;">No Services Found</h3>
+                    <p style="color: var(--color-text-muted);">Try adjusting your filters</p>
+                </div>
+            `;
+            return;
         }
 
-        // Scroll progress
-        const winHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPercent = (scrolled / winHeight) * 100;
-        scrollProgress.style.width = scrollPercent + '%';
-    });
-
-    // Mobile Navigation
-    const navToggle = document.getElementById('navToggle');
-    const navList = document.getElementById('navList');
-
-    navToggle.addEventListener('click', function() {
-        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !isExpanded);
-        navList.classList.toggle('active');
-    });
-
-    // Close mobile nav when clicking on links
-    navList.addEventListener('click', function(e) {
-        if (e.target.tagName === 'A') {
-            navList.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
-        }
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+        grid.innerHTML = this.filteredServices.map(service => this.createServiceCard(service)).join('');
+        
+        // Add fade-in animation
+        const cards = grid.querySelectorAll('.service-card-enhanced');
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add('fade-in-up');
+            }, index * 100);
         });
-    });
+    }
 
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    createServiceCard(service) {
+        const imageUrl = service.image || `https://picsum.photos/seed/${service.id}/400/200.jpg`;
+        
+        return `
+            <div class="service-card-enhanced">
+                ${service.badge ? `<div class="service-badge">${service.badge}</div>` : ''}
+                <div class="service-header">
+                    <img src="${imageUrl}" alt="${service.title}" class="service-image" onerror="this.src='https://picsum.photos/seed/${service.id}/400/200.jpg'">
+                    <div class="service-overlay">
+                        <div>
+                            <h3 class="service-title">${service.title}</h3>
+                            <p class="service-category">${service.category}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <p class="service-description">${service.description}</p>
+                    
+                    <div class="service-features">
+                        <ul>
+                            ${service.features.slice(0, 4).map(feature => `<li>${feature}</li>`).join('')}
+                            ${service.features.length > 4 ? `<li>...and ${service.features.length - 4} more</li>` : ''}
+                        </ul>
+                    </div>
 
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
-    }, observerOptions);
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="service-amount">${service.priceDisplay}</span>
+                            <span class="service-duration">${service.duration}</span>
+                        </div>
+                        <div class="service-actions">
+                            <button class="btn-service btn-service--secondary" onclick="servicesManager.showServiceDetails('${service.id}')">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                            <button class="btn-service btn-service--primary" onclick="servicesManager.bookService('${service.id}')">
+                                <i class="fas fa-shopping-cart"></i> Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
 
-    // Observe all animation elements
-    document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in').forEach(el => {
-        observer.observe(el);
-    });
+    showServiceDetails(serviceId) {
+        const service = this.services.find(s => s.id === serviceId);
+        if (!service) return;
 
-    // Red Flag Popup Functions
-    function openRedFlagPopup() {
-        document.getElementById('redFlagPopup').classList.add('active');
+        const modal = document.getElementById('serviceModal');
+        const modalContent = document.getElementById('serviceModalContent');
+        
+        const imageUrl = service.image || `https://picsum.photos/seed/${service.id}/900/300.jpg`;
+        
+        modalContent.innerHTML = `
+            <div style="position: relative; height: 300px; overflow: hidden; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+                <img src="${imageUrl}" alt="${service.title}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://picsum.photos/seed/${service.id}/900/300.jpg'">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 40px; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);">
+                    <h2 style="color: var(--color-white); font: 700 2.5rem var(--font-display); margin: 0;">${service.title}</h2>
+                    <p style="color: var(--color-gold); font-size: 1.2rem; margin-top: 10px;">${service.category} • ${service.duration}</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--color-text); line-height: 1.8; font-size: 1.1rem; margin-bottom: 30px;">${service.description}</p>
+                
+                <div style="background: rgba(200, 121, 65, 0.1); padding: 30px; border-radius: var(--radius); margin-bottom: 30px;">
+                    <h3 style="color: var(--color-white); font: 700 1.5rem var(--font-display); margin-bottom: 20px;">What's Included</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        ${service.includes ? service.includes.map(item => `
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-check-circle" style="color: var(--color-gold);"></i>
+                                <span style="color: var(--color-text);">${item}</span>
+                            </div>
+                        `).join('') : ''}
+                    </div>
+                </div>
+
+                <h3 style="color: var(--color-white); font: 700 1.5rem var(--font-display); margin-bottom: 20px;">Complete Feature List</h3>
+                <div class="service-features" style="margin-bottom: 30px;">
+                    <ul>
+                        ${service.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                </div>
+
+                ${service.timeline ? `
+                <div class="timeline">
+                    <h3 style="color: var(--color-white); font: 700 1.5rem var(--font-display); margin-bottom: 20px;">Program Timeline</h3>
+                    ${service.timeline.map(item => `
+                        <div class="timeline-item">
+                            <div class="timeline-marker">${item.week}</div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">${item.title}</h4>
+                                <p class="timeline-description">${item.description}</p>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
+
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px; background: var(--color-tertiary); border-radius: var(--radius); margin-top: 30px;">
+                    <div>
+                        <div style="font: 700 2.5rem var(--font-display); color: var(--color-gold);">${service.priceDisplay}</div>
+                        <div style="color: var(--color-text-muted); font-size: 1rem;">${service.duration}</div>
+                    </div>
+                    <button class="btn btn--primary" style="font-size: 1.1rem; padding: 15px 40px;" onclick="servicesManager.bookService('${service.id}')">
+                        <i class="fas fa-shopping-cart"></i> Book This Service
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
     }
 
-    function closeRedFlagPopup() {
-        document.getElementById('redFlagPopup').classList.remove('active');
+    async bookService(serviceId) {
+        const service = this.services.find(s => s.id === serviceId);
+        if (!service) return;
+
+        // Show payment processing
+        document.getElementById('paymentProcessing').style.display = 'flex';
+
+        try {
+            // In a real implementation, you would create a Stripe checkout session
+            // For demo purposes, we'll simulate the payment process
+            
+            // Simulate payment processing delay
+            await new Promise(resolve => setTimeout(resolve, 2000));
+
+            // Hide payment processing
+            document.getElementById('paymentProcessing').style.display = 'none';
+
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            successMessage.scrollIntoView({ behavior: 'smooth' });
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+
+            // Close modal if it's open
+            this.closeServiceModal();
+
+        } catch (error) {
+            console.error('Payment error:', error);
+            document.getElementById('paymentProcessing').style.display = 'none';
+            alert('Payment failed. Please try again.');
+        }
+    }
+
+    closeServiceModal() {
+        const modal = document.getElementById('serviceModal');
+        modal.style.display = 'none';
         document.body.style.overflow = 'auto';
     }
 
-    function handleRedFlagSubmit(event) {
-        event.preventDefault();
-        const email = event.target.querySelector('input[type="email"]').value;
+    showError() {
+        const grid = document.getElementById('servicesGrid');
+        grid.innerHTML = `
+            <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
+                <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: var(--color-gold); margin-bottom: 20px;"></i>
+                <h3 style="color: var(--color-white); margin-bottom: 10px;">Unable to Load Services</h3>
+                <p style="color: var(--color-text-muted);">Please check back later.</p>
+            </div>
+        `;
+    }
+}
 
-        // Here you would typically send the email to your backend
-        console.log('Email submitted:', email);
+// Global function for modal closing
+function closeServiceModal() {
+    if (window.servicesManager) {
+        window.servicesManager.closeServiceModal();
+    }
+}
 
-        // Show success message or redirect to download
-        alert('Thank you! Check your email for the download link.');
-        closeRedFlagPopup();
+// Close modal when clicking outside
+document.getElementById('serviceModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeServiceModal();
+    }
+});
+
+// Initialize services manager
+let servicesManager;
+
+// Standard site functionality
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        document.getElementById('loadingScreen').classList.add('hidden');
+    }, 500);
+    
+    // Initialize services management system
+    servicesManager = new ServicesManager();
+});
+
+// Header Scroll Effect
+const header = document.getElementById('header');
+const scrollProgress = document.getElementById('scrollProgress');
+
+window.addEventListener('scroll', function() {
+    const scrolled = window.pageYOffset;
+    
+    if (scrolled > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
     }
 
-    // Close popup when clicking outside
-    document.getElementById('redFlagPopup').addEventListener('click', function(e) {
-        if (e.target === this) {
-            closeRedFlagPopup();
-        }
-    });
+    const winHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrolled / winHeight) * 100;
+    scrollProgress.style.width = scrollPercent + '%';
+});
 
-    // Escape key to close popup
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeRedFlagPopup();
-        }
-    });
+// Mobile Navigation
+const navToggle = document.getElementById('navToggle');
+const navList = document.getElementById('navList');
 
-    // Service card hover effects
-    document.querySelectorAll('.service-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-15px) scale(1.02)';
-        });
+navToggle.addEventListener('click', function() {
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !isExpanded);
+    navList.classList.toggle('active');
+});
 
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-
-    // Add some interactive elements
-    document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            // Create ripple effect
-            const ripple = document.createElement('span');
-            const rect = this.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const x = e.clientX - rect.left - size / 2;
-            const y = e.clientY - rect.top - size / 2;
-
-            ripple.style.cssText = `
-                position: absolute;
-                width: ${size}px;
-                height: ${size}px;
-                left: ${x}px;
-                top: ${y}px;
-                background: rgba(255,255,255,0.1);
-                border-radius: 50%;
-                transform: scale(0);
-                animation: ripple 0.6s ease-out;
-                pointer-events: none;
-            `;
-
-            this.style.position = 'relative';
-            this.style.overflow = 'hidden';
-            this.appendChild(ripple);
-
-            setTimeout(() => ripple.remove(), 600);
-        });
-    });
-
-    // Add ripple animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes ripple {
-            to {
-                transform: scale(2);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-
-    // Performance optimization: Debounce scroll events
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
+navList.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+        navList.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
     }
+});
 
-    // Apply debounce to scroll handler
-    const debouncedScrollHandler = debounce(function() {
-        // Any additional scroll-based animations can go here
-    }, 10);
-
-    window.addEventListener('scroll', debouncedScrollHandler);
-
-    // Add loading states for external links
-    document.querySelectorAll('a[target="_blank"]').forEach(link => {
-        link.addEventListener('click', function() {
-            const originalText = this.innerHTML;
-            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening...';
-            setTimeout(() => {
-                this.innerHTML = originalText;
-            }, 2000);
-        });
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
+});
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in').forEach(el => {
+    observer.observe(el);
+});
 </script>
 
-
-   <!-- Form Validation -->
-   <script src="js/form-validation.js"></script>
-   <!-- Enhanced Analytics Tracking -->
-   <script src="js/analytics.js"></script>
-   
-    <script src="js/header-footer.js"></script>
-    <script src="js/sticky-cta.js"></script>
-    <script src="js/animations.js"></script>
-   </body>
+<script src="js/header-footer.js"></script>
+<script src="js/animations.js"></script>
+</body>
 </html>

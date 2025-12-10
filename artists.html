@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSPNJ5DR');</script>
+<!-- End Google Tag Manager -->
+
+<title>HLPFL Records | Our Artists - Complete Roster</title>
+<meta name="description" content="Meet the complete roster of talented artists signed to HLPFL Records. Discover their music, stories, upcoming releases, and tour dates.">
+<meta charset="UTF-8">
+<link rel="canonical" href="https://hlpfl.org/artists/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Meta Tags/Favicon/themes/fonts-->
+<link rel="apple-touch-icon" sizes="180x180" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="images/updatedimages/hlpflsvggradientsymbol copy.svg">
+<link rel="shortcut icon" href="images/favicon/hlpflsymbolpnggradient.ico">
+<link rel="manifest" href="images/favicon/new/site.webmanifest">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="theme-color" content="#000000">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Our Artists - HLPFL Records">
+<meta property="og:description" content="Meet the talented artists signed to HLPFL Records. Discover their music, stories, and upcoming releases.">
+<meta property="og:image" content="https://hlpfl.org/og-cover.jpg">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/mobile.css">
+<link rel="stylesheet" href="css/mobile-fixes.css">
+<link rel="stylesheet" href="css/color-scheme.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+
+<!-- Enhanced Styles for Dynamic Artist Roster -->
+<style>
+/* Artist Grid Enhancements */
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.artist-card {
+  background: var(--color-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+  border: 1px solid var(--color-border);
+  position: relative;
+  cursor: pointer;
+}
+
+.artist-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-gold);
+}
+
+.artist-header {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.artist-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.artist-card:hover .artist-image {
+  transform: scale(1.05);
+}
+
+.artist-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.artist-name {
+  color: var(--color-white);
+  font: 700 1.8rem var(--font-display);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.artist-genre {
+  color: var(--color-gold);
+  font-size: 1rem;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.artist-content {
+  padding: 30px;
+}
+
+.artist-bio {
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.artist-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(200, 121, 65, 0.1);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.stat {
+  color: var(--color-text);
+}
+
+.stat-number {
+  display: block;
+  font: 700 1.3rem var(--font-display);
+  color: var(--color-gold);
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.artist-social {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.artist-social a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200, 121, 65, 0.1);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  transition: all var(--transition-quick);
+  font-size: 1.2rem;
+}
+
+.artist-social a:hover {
+  background: var(--color-gold);
+  color: var(--color-white);
+  transform: translateY(-3px);
+}
+
+.artist-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.artist-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition-quick);
+  font-size: 0.9rem;
+}
+
+.artist-btn--primary {
+  background: var(--color-gold);
+  color: var(--color-white);
+}
+
+.artist-btn--primary:hover {
+  background: #d89055;
+  transform: translateY(-2px);
+}
+
+.artist-btn--secondary {
+  background: transparent;
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+}
+
+.artist-btn--secondary:hover {
+  background: var(--color-gold);
+  color: var(--color-white);
+}
+
+/* Filter Section */
+.artists-filter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 2px solid var(--color-border);
+  background: var(--color-secondary);
+  color: var(--color-text);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all var(--transition-quick);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background: rgba(200, 121, 65, 0.1);
+}
+
+/* Search Bar */
+.search-container {
+  max-width: 500px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-secondary);
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: all var(--transition-quick);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-text);
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--color-border);
+  border-top: 3px solid var(--color-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+/* Modal Styles */
+.artist-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: var(--color-secondary);
+  margin: 50px auto;
+  max-width: 900px;
+  border-radius: var(--radius-lg);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.modal-header {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.modal-body {
+  padding: 40px;
+}
+
+.releases-section {
+  margin-top: 40px;
+}
+
+.releases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.release-card {
+  background: rgba(200, 121, 65, 0.1);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  transition: all var(--transition-quick);
+}
+
+.release-card:hover {
+  transform: translateY(-5px);
+  background: rgba(200, 121, 65, 0.2);
+}
+
+.release-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+}
+
+.release-title {
+  font: 700 1.1rem var(--font-display);
+  color: var(--color-white);
+  margin-bottom: 5px;
+}
+
+.release-info {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .artists-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .artist-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .modal-content {
+    margin: 20px;
+    max-height: 95vh;
+  }
+  
+  .modal-body {
+    padding: 25px;
+  }
+  
+  .releases-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+</style>
+
+<!-- JSON-LD Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "HLPFL Records",
+  "description": "Independent record label helping artists launch successful music careers.",
+  "url": "https://hlpfl.org",
+  "logo": "https://hlpfl.org/images/updatedimages/hlpflsvggradientsymbol copy.svg"
+}
+</script>
+
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSPNJ5DR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+    <img src="images/favicon/hlpflsvggradientsymbol.svg" alt="HLPFL Records Logo" class="loading-logo">
+    <div class="loading-text">Music Loading...</div>
+</div>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Header -->
+<header class="header" id="header">
+    <div class="container">
+        <a href="/" class="logo">
+            <img src="images/favicon/hlpflsvggradientsymbol.svg" alt="HLPFL Records">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list" id="navList">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="music.html">Music</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="contact.html">Submit Demo</a></li>
+                <li><a href="https://calendly.com/founder-hlpfl/30min" class="btn btn--primary" target="_blank">Book A&R Call</a></li>
+            </ul>
+            <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content fade-in-up">
+            <h1 class="hero-title">Our Artists</h1>
+            <p class="hero-subtitle">
+                Discover the talented musicians who make HLPFL Records their creative home. 
+                Each artist brings their unique voice and vision to our label family.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Search and Filter Section -->
+<section class="content-section">
+    <div class="container">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="artistSearch" class="search-input" placeholder="Search artists by name or genre...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="artists-filter" id="artistFilter">
+            <button class="filter-btn active" data-genre="all">All Artists</button>
+            <button class="filter-btn" data-genre="pop">Pop</button>
+            <button class="filter-btn" data-genre="electronic">Electronic</button>
+            <button class="filter-btn" data-genre="hip-hop">Hip-Hop</button>
+            <button class="filter-btn" data-genre="r&b">R&B</button>
+            <button class="filter-btn" data-genre="indie">Indie Rock</button>
+            <button class="filter-btn" data-genre="classical">Classical</button>
+        </div>
+
+        <!-- Artists Grid -->
+        <div id="artistsGrid" class="artists-grid">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading amazing artists...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Artist Detail Modal -->
+<div id="artistModal" class="artist-modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeArtistModal()">&times;</button>
+        <div id="modalContent">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-brand fade-in-up">
+                <img src="images/footer/footerlogowebsitev1.webp" alt="HLPFL Records" class="footer-logo" loading="lazy">
+                <p class="footer-description">
+                    Transforming musical talent into success stories. We help independent artists launch successful music careers 
+                    through comprehensive record label services and artist development.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+             <div class="footer-column fade-in-up" style="animation-delay: 0.1s">
+                <h4>Services</h4>
+                    <ul>
+                    <li><a href="services.html">Artist Development</a></li>
+                    <li><a href="services.html">Music Production</a></li>
+                    <li><a href="services.html">Distribution</a></li>
+                    <li><a href="services.html">A&R Services</a></li>
+                    </ul>
+            </div>
+
+            <div class="footer-column fade-in-up" style="animation-delay: 0.2s">
+                <h4>Music</h4>
+                    <ul>
+                    <li><a href="artists.html">Our Artists</a></li>
+                    <li><a href="music.html">Releases</a></li>
+                    <li><a href="shop.html">Merchandise</a></li>
+                    <li><a href="#" onclick="openRedFlagPopup()">Demo Submissions</a></li>
+                    </ul>
+            </div>
+
+            <div class="footer-column fade-in-up" style="animation-delay: 0.3s">
+                <h4>Company</h4>
+                 <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="under-construction.html">Terms of Service</a></li>
+                 </ul>
+            </div>
+
+        <div class="footer-bottom fade-in-up">
+            <p>2019 HLPFL Records. All rights reserved. Built with passion for music artists.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/menu-injector.js"></script>
+<script>
+// Artist Management System
+class ArtistManager {
+    constructor() {
+        this.artists = [];
+        this.filteredArtists = [];
+        this.currentFilter = 'all';
+        this.searchTerm = '';
+        this.init();
+    }
+
+    async init() {
+        try {
+            await this.loadArtists();
+            this.setupEventListeners();
+            this.renderArtists();
+        } catch (error) {
+            console.error('Failed to initialize artist manager:', error);
+            this.showError();
+        }
+    }
+
+    async loadArtists() {
+        try {
+            const response = await fetch('data/artists.json');
+            const data = await response.json();
+            this.artists = data.artists;
+            this.filteredArtists = [...this.artists];
+        } catch (error) {
+            console.error('Error loading artists:', error);
+            // Fallback artists data
+            this.artists = this.getFallbackArtists();
+            this.filteredArtists = [...this.artists];
+        }
+    }
+
+    getFallbackArtists() {
+        return [
+            {
+                id: "luna-echo",
+                name: "Luna Echo",
+                genre: "Pop / Electronic",
+                bio: "Luna Echo blends ethereal vocals with cutting-edge electronic production to create a sound that's both intimate and expansive.",
+                stats: { monthly_listeners: "245K", followers: "189K", plays: "12.5M" },
+                social: { spotify: "#", instagram: "#", youtube: "#", soundcloud: "#" }
+            },
+            {
+                id: "marcus-rivers",
+                name: "Marcus Rivers", 
+                genre: "Hip-Hop / R&B",
+                bio: "Marcus Rivers brings authentic storytelling to modern hip-hop, combining smooth R&B melodies with hard-hitting beats.",
+                stats: { monthly_listeners: "512K", followers: "342K", plays: "28.3M" },
+                social: { spotify: "#", instagram: "#", youtube: "#", soundcloud: "#" }
+            }
+        ];
+    }
+
+    setupEventListeners() {
+        // Search functionality
+        const searchInput = document.getElementById('artistSearch');
+        searchInput.addEventListener('input', (e) => {
+            this.searchTerm = e.target.value.toLowerCase();
+            this.filterArtists();
+        });
+
+        // Filter buttons
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                this.currentFilter = e.target.dataset.genre;
+                this.filterArtists();
+            });
+        });
+    }
+
+    filterArtists() {
+        this.filteredArtists = this.artists.filter(artist => {
+            const matchesSearch = !this.searchTerm || 
+                artist.name.toLowerCase().includes(this.searchTerm) ||
+                artist.genre.toLowerCase().includes(this.searchTerm);
+            
+            const matchesFilter = this.currentFilter === 'all' ||
+                artist.genre.toLowerCase().includes(this.currentFilter.toLowerCase());
+            
+            return matchesSearch && matchesFilter;
+        });
+        
+        this.renderArtists();
+    }
+
+    renderArtists() {
+        const grid = document.getElementById('artistsGrid');
+        
+        if (this.filteredArtists.length === 0) {
+            grid.innerHTML = `
+                <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
+                    <i class="fas fa-search" style="font-size: 3rem; color: var(--color-gold); margin-bottom: 20px;"></i>
+                    <h3 style="color: var(--color-white); margin-bottom: 10px;">No Artists Found</h3>
+                    <p style="color: var(--color-text-muted);">Try adjusting your search or filters</p>
+                </div>
+            `;
+            return;
+        }
+
+        grid.innerHTML = this.filteredArtists.map(artist => this.createArtistCard(artist)).join('');
+        
+        // Add fade-in animation
+        const cards = grid.querySelectorAll('.artist-card');
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add('fade-in-up');
+            }, index * 100);
+        });
+    }
+
+    createArtistCard(artist) {
+        const imageUrl = artist.image || `https://picsum.photos/seed/${artist.id}/400/300.jpg`;
+        
+        return `
+            <div class="artist-card" onclick="artistManager.showArtistDetails('${artist.id}')">
+                <div class="artist-header">
+                    <img src="${imageUrl}" alt="${artist.name}" class="artist-image" onerror="this.src='https://picsum.photos/seed/${artist.id}/400/300.jpg'">
+                    <div class="artist-overlay">
+                        <div>
+                            <h3 class="artist-name">${artist.name}</h3>
+                            <p class="artist-genre">${artist.genre}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="artist-content">
+                    <p class="artist-bio">${artist.bio}</p>
+                    
+                    <div class="artist-stats">
+                        <div class="stat">
+                            <span class="stat-number">${artist.stats?.monthly_listeners || '0'}</span>
+                            <span class="stat-label">Monthly Listeners</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">${artist.stats?.followers || '0'}</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">${artist.stats?.plays || '0'}</span>
+                            <span class="stat-label">Total Plays</span>
+                        </div>
+                    </div>
+
+                    <div class="artist-social">
+                        ${artist.social?.spotify ? `<a href="${artist.social.spotify}" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>` : ''}
+                        ${artist.social?.instagram ? `<a href="${artist.social.instagram}" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>` : ''}
+                        ${artist.social?.youtube ? `<a href="${artist.social.youtube}" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>` : ''}
+                        ${artist.social?.soundcloud ? `<a href="${artist.social.soundcloud}" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>` : ''}
+                    </div>
+
+                    <div class="artist-actions">
+                        <a href="#" class="artist-btn artist-btn--primary" onclick="event.stopPropagation(); artistManager.showArtistDetails('${artist.id}')">
+                            <i class="fas fa-info-circle"></i> View Details
+                        </a>
+                        <a href="${artist.social?.spotify || '#'}" target="_blank" class="artist-btn artist-btn--secondary" onclick="event.stopPropagation()">
+                            <i class="fas fa-play"></i> Listen Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    showArtistDetails(artistId) {
+        const artist = this.artists.find(a => a.id === artistId);
+        if (!artist) return;
+
+        const modal = document.getElementById('artistModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        const imageUrl = artist.image || `https://picsum.photos/seed/${artist.id}/900/300.jpg`;
+        
+        modalContent.innerHTML = `
+            <div class="modal-header">
+                <img src="${imageUrl}" alt="${artist.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://picsum.photos/seed/${artist.id}/900/300.jpg'">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 40px; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);">
+                    <h2 style="color: var(--color-white); font: 700 2.5rem var(--font-display); margin: 0;">${artist.name}</h2>
+                    <p style="color: var(--color-gold); font-size: 1.2rem; margin-top: 10px;">${artist.genre}</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--color-text); line-height: 1.8; font-size: 1.1rem; margin-bottom: 30px;">${artist.bio}</p>
+                
+                <div class="artist-stats" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 30px;">
+                    <div class="stat">
+                        <span class="stat-number">${artist.stats?.monthly_listeners || '0'}</span>
+                        <span class="stat-label">Monthly Listeners</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">${artist.stats?.followers || '0'}</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">${artist.stats?.plays || '0'}</span>
+                        <span class="stat-label">Total Plays</span>
+                    </div>
+                </div>
+
+                <div class="artist-social" style="justify-content: center; margin-bottom: 30px;">
+                    ${artist.social?.spotify ? `<a href="${artist.social.spotify}" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>` : ''}
+                    ${artist.social?.instagram ? `<a href="${artist.social.instagram}" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>` : ''}
+                    ${artist.social?.youtube ? `<a href="${artist.social.youtube}" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>` : ''}
+                    ${artist.social?.soundcloud ? `<a href="${artist.social.soundcloud}" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>` : ''}
+                </div>
+
+                ${artist.releases && artist.releases.length > 0 ? `
+                <div class="releases-section">
+                    <h3 style="color: var(--color-white); font: 700 1.8rem var(--font-display); margin-bottom: 20px;">Releases</h3>
+                    <div class="releases-grid">
+                        ${artist.releases.map(release => `
+                            <div class="release-card">
+                                <img src="${release.cover || `https://picsum.photos/seed/${release.title}/200/200.jpg`}" alt="${release.title}" class="release-cover" onerror="this.src='https://picsum.photos/seed/${release.title}/200/200.jpg'">
+                                <h4 class="release-title">${release.title}</h4>
+                                <p class="release-info">${release.type} • ${release.year} • ${release.tracks} tracks</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                ` : ''}
+
+                ${artist.tour && artist.tour.length > 0 ? `
+                <div class="releases-section">
+                    <h3 style="color: var(--color-white); font: 700 1.8rem var(--font-display); margin-bottom: 20px;">Upcoming Shows</h3>
+                    ${artist.tour.map(show => `
+                        <div style="background: rgba(200, 121, 65, 0.1); padding: 20px; border-radius: var(--radius); margin-bottom: 15px;">
+                            <h4 style="color: var(--color-white); margin-bottom: 5px;">${show.venue}</h4>
+                            <p style="color: var(--color-text); margin-bottom: 10px;">${show.city}, ${show.country} • ${show.date}</p>
+                            <a href="${show.ticket_link}" target="_blank" class="btn btn--primary">Get Tickets</a>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
+            </div>
+        `;
+        
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    showError() {
+        const grid = document.getElementById('artistsGrid');
+        grid.innerHTML = `
+            <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
+                <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: var(--color-gold); margin-bottom: 20px;"></i>
+                <h3 style="color: var(--color-white); margin-bottom: 10px;">Unable to Load Artists</h3>
+                <p style="color: var(--color-text-muted);">Please check back later.</p>
+            </div>
+        `;
+    }
+}
+
+// Modal functions
+function closeArtistModal() {
+    const modal = document.getElementById('artistModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+document.getElementById('artistModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeArtistModal();
+    }
+});
+
+// Initialize artist manager
+let artistManager;
+
+// Standard site functionality
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        document.getElementById('loadingScreen').classList.add('hidden');
+    }, 500);
+    
+    // Initialize artist management system
+    artistManager = new ArtistManager();
+});
+
+// Header Scroll Effect
+const header = document.getElementById('header');
+const scrollProgress = document.getElementById('scrollProgress');
+
+window.addEventListener('scroll', function() {
+    const scrolled = window.pageYOffset;
+    
+    if (scrolled > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+
+    const winHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrolled / winHeight) * 100;
+    scrollProgress.style.width = scrollPercent + '%';
+});
+
+// Mobile Navigation
+const navToggle = document.getElementById('navToggle');
+const navList = document.getElementById('navList');
+
+navToggle.addEventListener('click', function() {
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !isExpanded);
+    navList.classList.toggle('active');
+});
+
+navList.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+        navList.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in').forEach(el => {
+    observer.observe(el);
+});
+</script>
+
+<script src="js/header-footer.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>

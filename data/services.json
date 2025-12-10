@@ -1,0 +1,200 @@
+{
+  "services": [
+    {
+      "id": "artist-development",
+      "title": "Artist Development Program",
+      "category": "Development",
+      "price": 2999,
+      "priceDisplay": "$2,999",
+      "duration": "3 Months",
+      "description": "Comprehensive artist development program designed to transform talented musicians into professional artists ready for the music industry.",
+      "features": [
+        "Vocal coaching and technique improvement",
+        "Songwriting workshops and collaboration sessions",
+        "Performance training and stage presence development",
+        "Personal branding and image consulting",
+        "Social media strategy and content creation",
+        "Industry networking and introductions",
+        "Weekly progress reviews and goal setting",
+        "Professional headshots and portfolio development"
+      ],
+      "includes": [
+        "12 one-on-one coaching sessions",
+        "4 group workshops",
+        "Professional recording session",
+        "Brand consultation",
+        "Social media audit and strategy",
+        "Industry networking opportunities"
+      ],
+      "stripePriceId": "price_1Oxxxxx",
+      "image": "images/services/artist-development.jpg",
+      "badge": "Most Popular",
+      "timeline": [
+        {
+          "week": "Week 1-2",
+          "title": "Foundation & Assessment",
+          "description": "Voice assessment, goal setting, and personal brand discovery"
+        },
+        {
+          "week": "Week 3-6", 
+          "title": "Skill Development",
+          "description": "Vocal training, songwriting workshops, and performance coaching"
+        },
+        {
+          "week": "Week 7-10",
+          "title": "Brand Building",
+          "description": "Image consulting, social media strategy, and content creation"
+        },
+        {
+          "week": "Week 11-12",
+          "title": "Industry Preparation",
+          "description": "Networking, showcase preparation, and career planning"
+        }
+      ]
+    },
+    {
+      "id": "music-production",
+      "title": "Professional Music Production",
+      "category": "Production",
+      "price": 4999,
+      "priceDisplay": "$4,999",
+      "duration": "Per Project",
+      "description": "Full-service music production package from concept to final mastered tracks, working with award-winning producers.",
+      "features": [
+        "Professional song production and arrangement",
+        "Multi-track recording in state-of-the-art studio",
+        "Professional mixing and mastering",
+        "Access to premium instruments and equipment",
+        "Collaboration with experienced producers",
+        "Unlimited revisions until satisfaction",
+        "Distribution-ready final files",
+        "Music video concept consultation"
+      ],
+      "includes": [
+        "Up to 5 songs production",
+        "8 hours studio time per song",
+        "Professional mixing and mastering",
+        "Producer collaboration",
+        "Instrument and equipment access",
+        "Final delivery in multiple formats"
+      ],
+      "stripePriceId": "price_1Oyyyyy",
+      "image": "images/services/music-production.jpg",
+      "badge": "Premium"
+    },
+    {
+      "id": "distribution-marketing",
+      "title": "Distribution & Marketing Package",
+      "category": "Distribution",
+      "price": 1999,
+      "priceDisplay": "$1,999",
+      "duration": "Annual",
+      "description": "Complete digital distribution and marketing package to get your music heard by millions worldwide.",
+      "features": [
+        "Distribution to 150+ digital platforms",
+        "Spotify playlist pitching and promotion",
+        "Social media marketing campaign",
+        "Press release and media outreach",
+        "YouTube content optimization",
+        "Monthly performance analytics",
+        "Revenue tracking and reporting",
+        "Dedicated marketing manager"
+      ],
+      "includes": [
+        "Unlimited song distribution",
+        "Spotify for Artists setup",
+        "Social media campaign management",
+        "Monthly analytics reports",
+        "Playlist pitching strategy",
+        "Press kit development"
+      ],
+      "stripePriceId": "price_1Ozzzzz",
+      "image": "images/services/distribution-marketing.jpg"
+    },
+    {
+      "id": "ar-services",
+      "title": "A&R Artist Discovery",
+      "category": "A&R",
+      "price": 999,
+      "priceDisplay": "$999",
+      "duration": "One-Time",
+      "description": "Professional A&R evaluation and consultation to assess your potential and provide industry insights.",
+      "features": [
+        "Professional music and performance evaluation",
+        "Market potential analysis",
+        "Genre positioning and competitive analysis",
+        "Career development roadmap",
+        "Industry connections and opportunities",
+        "Label submission guidance",
+        "Written assessment report",
+        "30-minute consultation call"
+      ],
+      "includes": [
+        "Complete music portfolio review",
+        "Performance video evaluation",
+        "Market analysis report",
+        "Career strategy session",
+        "Industry recommendations"
+      ],
+      "stripePriceId": "price_1Owwwww",
+      "image": "images/services/ar-services.jpg",
+      "badge": "Great Value"
+    },
+    {
+      "id": "tour-management",
+      "title": "Tour & Live Event Management",
+      "category": "Live Events",
+      "price": 3499,
+      "priceDisplay": "$3,499",
+      "duration": "Per Tour",
+      "description": "Complete tour and live event management package for successful performances and fan engagement.",
+      "features": [
+        "Tour planning and logistics coordination",
+        "Venue booking and contract negotiation",
+        "Technical rider and stage management",
+        "Marketing and promotion for shows",
+        "Ticket sales management",
+        "Travel and accommodation arrangements",
+        "Merchandise strategy and setup",
+        "On-site tour manager support"
+      ],
+      "includes": [
+        "Up to 10 show management",
+        "Venue booking and negotiation",
+        "Technical production coordination",
+        "Marketing campaign for tour",
+        "On-site management"
+      ],
+      "stripePriceId": "price_1Oxxxxx2",
+      "image": "images/services/tour-management.jpg"
+    },
+    {
+      "id": "branding-package",
+      "title": "Complete Artist Branding Package",
+      "category": "Branding",
+      "price": 2499,
+      "priceDisplay": "$2,499",
+      "duration": "One-Time",
+      "description": "Comprehensive branding package to establish your unique artist identity and visual presence.",
+      "features": [
+        "Logo design and brand identity",
+        "Professional photoshoot and video",
+        "Website design and development",
+        "Social media templates and strategy",
+        "Merchandise design concepts",
+        "Press kit and bio writing",
+        "Visual style guide",
+        "Brand consultation sessions"
+      ],
+      "includes": [
+        "Professional photoshoot",
+        "Logo design variations",
+        "Website development",
+        "Social media template pack",
+        "Press kit creation"
+      ],
+      "stripePriceId": "price_1Oyyyyy2",
+      "image": "images/services/branding-package.jpg"
+    }
+  ]
+}
