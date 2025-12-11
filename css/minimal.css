@@ -1,0 +1,40 @@
+/* HLPFL Minimal Styles */
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Minimal animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1, .hero p {
+    animation: fadeIn 1s ease-out;
+}
+
+.stat-number {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+}
