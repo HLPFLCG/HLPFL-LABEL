@@ -21,19 +21,46 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            color: #000000;
+            background: #f4f1ea;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0,0,0,0.03) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(0,0,0,0.03) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 200px 200px, 150px 150px, 100px 100px;
+            background-position: 0 0, 50px 50px, 25px 25px;
+            color: #1a1a1a;
             line-height: 1.6;
             overflow-x: hidden;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(45deg, rgba(139, 69, 19, 0.02) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(139, 69, 19, 0.02) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(139, 69, 19, 0.02) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(139, 69, 19, 0.02) 75%);
+            background-size: 40px 40px;
+            background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+            pointer-events: none;
+            z-index: 1;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
+            position: relative;
+            z-index: 2;
         }
 
         /* Main Content */
@@ -51,11 +78,15 @@
         }
 
         .logo {
-            font-family: 'Iceland', cursive;
-            font-size: 5rem;
-            letter-spacing: 4px;
             margin-bottom: 40px;
             line-height: 1;
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+            max-width: 100%;
+            filter: contrast(1.1) brightness(0.95);
         }
 
         .tagline {
@@ -88,23 +119,27 @@
         .divider {
             width: 60px;
             height: 2px;
-            background: #000;
+            background: #1a1a1a;
             margin: 40px auto;
+            opacity: 0.3;
         }
 
-        /* Footer */
+        /* Footer - No line */
         footer {
             padding: 40px 0;
             text-align: center;
             font-size: 0.85rem;
-            opacity: 0.6;
-            border-top: 1px solid #000;
+            opacity: 0.4;
+            border-top: none;
+            background: transparent;
+            position: relative;
+            z-index: 2;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .logo {
-                font-size: 3rem;
+            .logo img {
+                width: 160px;
             }
             
             .main {
@@ -117,8 +152,8 @@
         }
 
         @media (max-width: 480px) {
-            .logo {
-                font-size: 2.5rem;
+            .logo img {
+                width: 140px;
             }
             
             .main {
@@ -133,31 +168,32 @@
     <main class="main">
         <div class="container">
             <div class="content">
-                <div class="logo">HLPFL</div>
+                <div class="logo">
+                    <img src="hlpfl-symbol.svg" alt="HLPFL">
+                </div>
                 <div class="tagline">CHAOS → CLARITY</div>
                 
                 <div class="pronunciation">pronounced "helpful"</div>
                 
                 <div class="info">
-                    <div class="info-item">Est. 2019</div>
-                    <div class="info-item">Grand Rapids, MI</div>
+                    <div class="info-item">an artist forward record label</div>
+                    <div class="info-item">est 2019.</div>
                 </div>
                 
                 <div class="divider"></div>
                 
                 <div class="info">
-                    <div class="info-item">Revolutionary record label with</div>
-                    <div class="info-item">50/50 artist partnerships</div>
+                    <div class="info-item">Grand Rapids, MI</div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer - No line -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 HLPFL</p>
+            <p>© 2025 HLPFL</p>
         </div>
     </footer>
 </body>
-</html><!-- Deployment trigger: Thu Dec 11 20:50:05 UTC 2025 -->
+</html>
